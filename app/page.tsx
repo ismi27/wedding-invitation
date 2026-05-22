@@ -316,7 +316,7 @@ export default function WeddingInvitation() {
                 {/* STARS */}
                 <div className="absolute inset-0 opacity-30 bg-[url('/images/stars.png')] bg-cover" />
 
-                <div className="absolute top-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-8 left-8 flex items-center gap-2 text-pink-200 font-mono text-sm z-20">
+                <div className="absolute top-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-8 left-8 flex items-center justify-center gap-2 text-pink-200 font-mono text-sm z-20">
                   <span>👑</span>
                   <span>// marriage.release v1.0.0</span>
                 </div>
@@ -404,8 +404,8 @@ export default function WeddingInvitation() {
 
                 </div>
               </section>
-              <section className="px-6 py-20">
-                <div className="max-w-5xl mx-auto text-center border border-pink-200/20 bg-white/5 backdrop-blur-xl rounded-[40px] px-6 md:px-10 py-10 md:py-16 shadow-2xl shadow-pink-500/10 relative overflow-hidden">
+              <section className="px-6 py-14 md:py-20">
+                <div className="max-w-5xl mx-auto text-center border border-pink-200/20 bg-white/5 backdrop-blur-xl rounded-[28px] md:rounded-[40px] px-6 md:px-10 py-10 md:py-16 shadow-2xl shadow-pink-500/10 relative overflow-hidden">
                   <p className="text-lg md:text-2xl leading-relaxed text-gray-300 font-light">
                     “Dan di antara tanda-tanda (kebesaran)-Nya ialah
                     Dia menciptakan pasangan-pasangan untukmu dari
@@ -532,7 +532,7 @@ export default function WeddingInvitation() {
                       <a
                         href="https://maps.app.goo.gl/3bKrRfVPNDVDbZcm7"
                         target="_blank"
-                        className="inline-flex items-center gap-2 mt-4 bg-pink-200 text-[#1B1527] px-5 py-3 rounded-xl font-semibold hover:opacity-90 transition shadow-lg shadow-pink-300/30"                  >
+                        className="inline-flex items-center justify-center gap-2 mt-4 bg-pink-200 text-[#1B1527] px-4 py-2 md:px-5 md:py-3 rounded-xl font-semibold hover:opacity-90 transition shadow-lg shadow-pink-300/30"                  >
                         <MapPin size={18} />
                         Lihat Lokasi
                       </a>
@@ -543,7 +543,7 @@ export default function WeddingInvitation() {
 
               <section className="px-6 py-12">
                 <div className="max-w-5xl mx-auto">
-                  <div className="flex items-center gap-2 text-gray-400 text-sm mb-8">
+                  <div className="flex items-center justify-center gap-2 text-gray-400 text-sm mb-8">
                     <GitBranch size={16} />
                     relationship-history.git
                   </div>
@@ -761,11 +761,11 @@ export default function WeddingInvitation() {
                   )}
                 </>
               </button>
-              <section className="relative z-10 px-5 md:px-10 py-20">
+              <section className="relative z-10 px-5 md:px-10 py-14 md:py-20">
                 <div className="max-w-6xl mx-auto">
 
                   {/* CARD */}
-                  <div className="relative overflow-hidden rounded-[40px] border border-pink-200/10 bg-white/5 backdrop-blur-2xl shadow-[0_0_80px_rgba(236,72,153,0.08)] p-8 md:p-14">
+                  <div className="relative overflow-hidden rounded-[28px] md:rounded-[40px] border border-pink-200/10 bg-white/5 backdrop-blur-2xl shadow-[0_0_80px_rgba(236,72,153,0.08)] p-8 md:p-14">
 
                     {/* GLOW */}
                     <div className="absolute inset-0 bg-gradient-to-br from-pink-400/5 via-transparent to-purple-500/5 pointer-events-none" />
@@ -776,11 +776,11 @@ export default function WeddingInvitation() {
           // wedding gift
                       </p>
 
-                      <h2 className="mt-4 text-3xl md:text-5xl font-light text-white">
+                      <h2 className="mt-4 text-lg md:text-2xl sm:text-3xl md:text-5xl font-light text-white">
                         ✨ Send Your Blessing
                       </h2>
 
-                      <p className="mt-6 text-pink-100/70 leading-relaxed max-w-2xl mx-auto">
+                      <p className="mt-6 text-sm md:text-base text-pink-100/70 leading-relaxed px-2 max-w-2xl mx-auto">
                         Kehadiran dan doa Anda adalah hadiah terindah bagi kami.
                         Namun jika ingin mengirim tanda kasih,
                         kami dengan senang hati menerimanya.
@@ -788,10 +788,10 @@ export default function WeddingInvitation() {
                     </div>
 
                     {/* CONTENT */}
-                    <div className="grid md:grid-cols-2 gap-8 mt-14 relative z-10">
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-14 relative z-10">
 
                       {/* DIGITAL GIFT */}
-                      <div className="rounded-3xl border border-pink-200/10 bg-[#ffffff08] p-8">
+                      <div className="rounded-3xl border border-pink-200/10 bg-[#ffffff08] p-5 md:p-8">
 
                         <div className="flex items-center gap-3 text-pink-200">
                           <Gift />
@@ -806,15 +806,15 @@ export default function WeddingInvitation() {
                             BCA • Ismi Rizki Sopiyanti
                           </p>
 
-                          <h4 className="mt-3 text-2xl font-bold tracking-widest text-white">
+                          <h4 className="mt-3 text-2xl font-bold tracking-widest text-white break-all">
                             1234567890
                           </h4>
 
                           <button
                             onClick={() => copyToClipboard("1234567890")}
-                            className="mt-5 px-5 py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white font-medium hover:scale-105 transition-all"
+                            className="mt-5 px-4 py-2 md:px-5 md:py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white font-medium hover:scale-105 transition-all"
                           >
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center justify-center gap-2">
                               <Copy size={18} />
                               Salin Rekening
                             </div>
@@ -827,15 +827,15 @@ export default function WeddingInvitation() {
                             Mandiri • Abdul Haris
                           </p>
 
-                          <h4 className="mt-3 text-2xl font-bold tracking-widest text-white">
+                          <h4 className="mt-3 text-2xl font-bold tracking-widest text-white break-all">
                             9876543210
                           </h4>
 
                           <button
                             onClick={() => copyToClipboard("9876543210")}
-                            className="mt-5 px-5 py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white font-medium hover:scale-105 transition-all"
+                            className="mt-5 px-4 py-2 md:px-5 md:py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white font-medium hover:scale-105 transition-all"
                           >
-                            <div className="flex items-center gap-2">
+                            <div className="flex items-center justify-center gap-2">
                               <Copy size={18} />
                               Salin Rekening
                             </div>
@@ -844,7 +844,7 @@ export default function WeddingInvitation() {
                       </div>
 
                       {/* PHYSICAL GIFT */}
-                      <div className="rounded-3xl border border-pink-200/10 bg-[#ffffff08] p-8">
+                      <div className="rounded-3xl border border-pink-200/10 bg-[#ffffff08] p-5 md:p-8">
 
                         <div className="flex items-center gap-3 text-pink-200">
                           <MapPin />
@@ -859,7 +859,7 @@ export default function WeddingInvitation() {
                             Untuk Ismi
                           </p>
 
-                          <p className="mt-4 text-white leading-relaxed">
+                          <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
                             Jl. Melati Indah No. 10<br />
                             Bandung, Jawa Barat
                           </p>
@@ -867,7 +867,7 @@ export default function WeddingInvitation() {
                           <a
                             href="https://maps.google.com"
                             target="_blank"
-                            className="inline-block mt-5 px-5 py-3 rounded-full bg-white/10 border border-pink-200/10 text-pink-100 hover:bg-white/20 transition-all"
+                            className="inline-block mt-5 px-4 py-2 md:px-5 md:py-3 rounded-full bg-white/10 border border-pink-200/10 text-pink-100 hover:bg-white/20 transition-all"
                           >
                             Lihat Lokasi
                           </a>
@@ -879,7 +879,7 @@ export default function WeddingInvitation() {
                             Untuk Haris
                           </p>
 
-                          <p className="mt-4 text-white leading-relaxed">
+                          <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
                             Jl. Mawar Elok No. 22<br />
                             Bandung, Jawa Barat
                           </p>
@@ -887,7 +887,7 @@ export default function WeddingInvitation() {
                           <a
                             href="https://maps.google.com"
                             target="_blank"
-                            className="inline-block mt-5 px-5 py-3 rounded-full bg-white/10 border border-pink-200/10 text-pink-100 hover:bg-white/20 transition-all"
+                            className="inline-block mt-5 px-4 py-2 md:px-5 md:py-3 rounded-full bg-white/10 border border-pink-200/10 text-pink-100 hover:bg-white/20 transition-all"
                           >
                             Lihat Lokasi
                           </a>
@@ -897,7 +897,7 @@ export default function WeddingInvitation() {
 
                     {/* FOOTER */}
                     <div className="mt-14 text-center relative z-10">
-                      <p className="text-pink-100/60 tracking-wide">
+                      <p className="text-pink-100/60 tracking-wide text-sm md:text-base">
                         ✨ Every blessing means the world to us ✨
                       </p>
                     </div>
