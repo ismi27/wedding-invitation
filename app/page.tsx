@@ -150,9 +150,9 @@ export default function WeddingInvitation() {
   return (
     <>
       {!isValidGuest ? (
-        <div className="min-h-screen bg-[#140F22] text-white flex items-center justify-center text-center px-6">
+        <div className="min-h-[100svh] bg-[#140F22] text-white flex items-center justify-center text-center px-6">
           <div className="max-w-md">
-            <h1 className="text-4xl font-semibold text-pink-100">
+            <h1 className="text-3xl md:text-4xl font-semibold text-pink-100">
               Undangan Tidak Valid
             </h1>
 
@@ -169,11 +169,11 @@ export default function WeddingInvitation() {
           </audio>
 
           {!opened ? (
-            <div className="relative min-h-screen text-white flex items-center justify-center px-6 overflow-hidden">
+            <div className="relative min-h-[100svh] text-white flex items-center justify-center px-6 overflow-hidden">
 
               {/* BACKGROUND IMAGE */}
               <div
-                className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                className="absolute inset-0 bg-cover bg-top md:bg-center bg-no-repeat"
                 style={{
                   backgroundImage: "url('/images/gate-bg.png')",
                 }}
@@ -183,9 +183,9 @@ export default function WeddingInvitation() {
               <div className="absolute inset-0 bg-[#140F22]/55" />
 
               {/* PINK GLOW */}
-              <div className="absolute left-[-120px] top-[10%] w-[400px] h-[400px] bg-pink-400/20 blur-[120px] rounded-full" />
+              <div className="absolute left-[-120px] top-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-pink-400/20 blur-[120px] rounded-full" />
 
-              <div className="absolute right-[-120px] bottom-[10%] w-[400px] h-[400px] bg-fuchsia-400/20 blur-[120px] rounded-full" />
+              <div className="absolute right-[-120px] bottom-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-fuchsia-400/20 blur-[120px] rounded-full" />
 
               {/* CONTENT */}
               <motion.div
@@ -199,7 +199,7 @@ export default function WeddingInvitation() {
                 </p>
 
                 <div className="mb-6">
-                  <p className="text-pink-100 italic text-3xl md:text-4xl font-light tracking-wide">
+                  <p className="text-pink-100 italic text-xl md:text-2xl md:text-3xl md:text-4xl font-light tracking-wide">
                     The Wedding Of
                   </p>
 
@@ -215,7 +215,7 @@ export default function WeddingInvitation() {
                   </div>
                 </div>
 
-                <h1 className="text-6xl md:text-8xl font-light leading-tight text-pink-100 drop-shadow-[0_0_20px_rgba(255,192,203,0.45)]">
+                <h1 className="text-3xl md:text-4xl sm:text-5xl md:text-8xl font-light leading-tight text-pink-100 drop-shadow-[0_0_20px_rgba(255,192,203,0.45)]">
 
 
                   Abdul Haris
@@ -238,7 +238,7 @@ export default function WeddingInvitation() {
                   </p>
 
                   <div className="inline-block px-8 py-4 rounded-2xl bg-white/10 border border-pink-200/20 backdrop-blur-xl shadow-lg shadow-pink-500/10">
-                    <p className="text-2xl md:text-3xl font-semibold text-white">
+                    <p className="text-xl md:text-2xl md:text-3xl font-semibold text-white">
                       {guestName}
                     </p>
                   </div>
@@ -267,18 +267,18 @@ export default function WeddingInvitation() {
                         })
                     }
                   }}
-                  className="mt-10 bg-gradient-to-r from-pink-200 to-fuchsia-200 text-[#1B1527] px-10 py-4 rounded-2xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl shadow-pink-300/40"            >
+                  className="mt-10 bg-gradient-to-r from-pink-200 to-fuchsia-200 text-[#1B1527] px-7 py-3 md:px-10 md:py-4 rounded-2xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl shadow-pink-300/40"            >
                   Buka Undangan
                 </button>
               </motion.div>
             </div>
           ) : (
 
-            <main className="relative min-h-screen text-white overflow-hidden">
+            <main className="relative min-h-[100svh] text-white overflow-hidden">
 
               {/* GLOBAL BACKGROUND */}
               <div
-                className="fixed inset-0 -z-10 bg-cover bg-center bg-no-repeat"
+                className="fixed inset-0 -z-10 bg-cover bg-top md:bg-center bg-no-repeat"
                 style={{
                   backgroundImage: "url('/images/fantasy-bg.png')",
                   backgroundAttachment: "fixed",
@@ -294,29 +294,29 @@ export default function WeddingInvitation() {
               </div>
               <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-pink-300/20 blur-[140px] rounded-full" />
 
-              <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-fuchsia-300/20 blur-[120px] rounded-full" />
+              <div className="absolute bottom-0 right-0 w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-fuchsia-300/20 blur-[120px] rounded-full" />
               {/* HERO */}
               <motion.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
-                className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden"          >
+                className="relative min-h-[100svh] flex flex-col items-center justify-center text-center px-6 overflow-hidden"          >
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#F9A8D4,transparent_40%)] opacity-30" />
                 {/* LEFT GLOW */}
-                <div className="absolute left-[-100px] top-[20%] w-[400px] h-[400px] bg-pink-400/20 blur-[120px] rounded-full" />
+                <div className="absolute left-[-100px] top-[20%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-pink-400/20 blur-[120px] rounded-full" />
 
                 {/* RIGHT GLOW */}
-                <div className="absolute right-[-100px] bottom-[10%] w-[400px] h-[400px] bg-fuchsia-400/20 blur-[120px] rounded-full" />
+                <div className="absolute right-[-100px] bottom-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-fuchsia-400/20 blur-[120px] rounded-full" />
 
                 {/* STARS */}
                 <div className="absolute inset-0 opacity-30 bg-[url('/images/stars.png')] bg-cover" />
 
-                <div className="absolute top-8 left-8 flex items-center gap-2 text-pink-200 font-mono text-sm z-20">
+                <div className="absolute top-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-8 left-8 flex items-center gap-2 text-pink-200 font-mono text-sm z-20">
                   <span>👑</span>
                   <span>// marriage.release v1.0.0</span>
                 </div>
 
-                <h1 className="text-6xl md:text-8xl font-light mt-6 leading-tight z-10">
+                <h1 className="text-3xl md:text-4xl sm:text-5xl md:text-8xl font-light mt-6 leading-tight z-10">
                   Abdul Haris
                   <div className="flex justify-center my-6">
                     <Heart
@@ -335,7 +335,7 @@ export default function WeddingInvitation() {
 
                 <div className="grid grid-cols-4 gap-4 mt-12 z-10">
                   <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-2xl p-4">
-                    <p className="text-3xl font-light">
+                    <p className="text-xl md:text-2xl md:text-3xl font-light">
                       {timeLeft.days}
                     </p>
                     <p className="text-sm text-gray-400 mt-1">
@@ -344,7 +344,7 @@ export default function WeddingInvitation() {
                   </div>
 
                   <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-2xl p-4">
-                    <p className="text-3xl font-light">
+                    <p className="text-xl md:text-2xl md:text-3xl font-light">
                       {timeLeft.hours}
                     </p>
                     <p className="text-sm text-gray-400 mt-1">
@@ -353,7 +353,7 @@ export default function WeddingInvitation() {
                   </div>
 
                   <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-2xl p-4">
-                    <p className="text-3xl font-light">
+                    <p className="text-2xl md:text-3xl font-light">
                       {timeLeft.minutes}
                     </p>
                     <p className="text-sm text-gray-400 mt-1">
@@ -362,7 +362,7 @@ export default function WeddingInvitation() {
                   </div>
 
                   <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-2xl p-4">
-                    <p className="text-3xl font-light">
+                    <p className="text-2xl md:text-3xl font-light">
                       {timeLeft.seconds}
                     </p>
                     <p className="text-sm text-gray-400 mt-1">
@@ -389,7 +389,7 @@ export default function WeddingInvitation() {
               <section className="px-6 py-12">
                 <div className="max-w-3xl mx-auto">
 
-                  <div className="relative bg-white p-4 rounded-t-[200px] overflow-hidden border-[6px] border-white/10 h-[600px]">
+                  <div className="relative bg-white p-4 rounded-t-[200px] overflow-hidden border-[6px] border-white/10 h-[380px] md:h-[600px]">
                     <Image
                       src="/images/sample_images.png"
                       alt="Couple"
@@ -400,8 +400,8 @@ export default function WeddingInvitation() {
                 </div>
               </section>
               <section className="px-6 py-20">
-                <div className="max-w-5xl mx-auto text-center border border-pink-200/20 bg-white/5 backdrop-blur-xl rounded-[40px] px-10 py-16 shadow-2xl shadow-pink-500/10 relative overflow-hidden">
-                  <p className="text-2xl leading-relaxed text-gray-300 font-light">
+                <div className="max-w-5xl mx-auto text-center border border-pink-200/20 bg-white/5 backdrop-blur-xl rounded-[40px] px-6 md:px-10 py-10 md:py-16 shadow-2xl shadow-pink-500/10 relative overflow-hidden">
+                  <p className="text-lg md:text-2xl leading-relaxed text-gray-300 font-light">
                     “Dan di antara tanda-tanda (kebesaran)-Nya ialah
                     Dia menciptakan pasangan-pasangan untukmu dari
                     jenismu sendiri, agar kamu cenderung dan merasa
@@ -423,7 +423,7 @@ export default function WeddingInvitation() {
 
                   {/* Pengantin Wanita */}
                   <div className="text-center">
-                    <div className="w-56 h-56 mx-auto rounded-t-[140px] rounded-b-[30px] border-pink-200/30 shadow-2xl shadow-pink-500/20 overflow-hidden border-4 border-white/10 relative">
+                    <div className="w-44 h-44 md:w-56 md:h-56 mx-auto rounded-t-[140px] rounded-b-[30px] border-pink-200/30 shadow-2xl shadow-pink-500/20 overflow-hidden border-4 border-white/10 relative">
                       <Image
                         src="/images/sample_images.png"
                         alt="Pengantin Wanita"
@@ -432,7 +432,7 @@ export default function WeddingInvitation() {
                       />
                     </div>
 
-                    <h2 className="text-4xl font-light mt-8">
+                    <h2 className="text-3xl md:text-4xl font-light mt-8">
                       Ismi Rizki Sopiyanti
                     </h2>
 
@@ -462,7 +462,7 @@ export default function WeddingInvitation() {
                       />
                     </div>
 
-                    <h2 className="text-4xl font-light mt-8">
+                    <h2 className="text-3xl md:text-4xl font-light mt-8">
                       Abdul Haris
                     </h2>
 
@@ -486,7 +486,7 @@ export default function WeddingInvitation() {
 
               {/* QUOTE */}
               <section className="px-6 py-12">
-                <div className="max-w-4xl mx-auto border border-white/10 rounded-3xl p-10 bg-white/5 backdrop-blur-sm">
+                <div className="max-w-4xl mx-auto border border-white/10 rounded-3xl p-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-10 bg-white/5 backdrop-blur-sm">
                   <p className="text-center text-2xl md:text-3xl font-light leading-relaxed text-gray-100">
                     “Two souls,
                     <br />
@@ -502,10 +502,10 @@ export default function WeddingInvitation() {
               {/* EVENT */}
               <section className="px-6 py-24 relative">
                 <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl p-8">
+                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl p-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-8">
                     <div className="flex items-center gap-3 text-pink-200">
                       <CalendarDays />
-                      <h2 className="text-2xl font-semibold">Akad Nikah</h2>
+                      <h2 className="text-lg md:text-2xl font-semibold">Akad Nikah</h2>
                     </div>
 
                     <div className="mt-6 space-y-2 text-gray-300">
@@ -514,10 +514,10 @@ export default function WeddingInvitation() {
                     </div>
                   </div>
 
-                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl p-8">
+                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl p-6 md:p-6 md:p-6 md:p-6 md:p-8">
                     <div className="flex items-center gap-3 text-pink-200">
                       <MapPin />
-                      <h2 className="text-2xl font-semibold">Resepsi</h2>
+                      <h2 className="text-lg md:text-2xl font-semibold">Resepsi</h2>
                     </div>
 
                     <div className="mt-6 space-y-2 text-gray-300">
@@ -578,7 +578,7 @@ export default function WeddingInvitation() {
                         viewport={{ once: true }}
                         className="grid md:grid-cols-2 gap-6 bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl overflow-hidden"
                       >
-                        <div className="relative h-[300px]">
+                        <div className="relative h-[220px] md:h-[300px]">
                           <Image
                             src={item.image}
                             alt={item.title}
@@ -587,12 +587,12 @@ export default function WeddingInvitation() {
                           />
                         </div>
 
-                        <div className="p-8 flex flex-col justify-center">
+                        <div className="p-6 md:p-6 md:p-6 md:p-6 md:p-5 md:p-8 flex flex-col justify-center">
                           <p className="text-pink-200 font-mono">
                             {item.year}
                           </p>
 
-                          <h3 className="text-2xl mt-3 font-semibold">
+                          <h3 className="text-lg md:text-xl md:text-2xl mt-3 font-semibold">
                             {item.title}
                           </h3>
 
@@ -608,13 +608,13 @@ export default function WeddingInvitation() {
 
               {/* RSVP */}
               <section className="px-6 py-24">
-                <div className="max-w-3xl mx-auto bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl p-10">
+                <div className="max-w-3xl mx-auto bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl p-6 md:p-6 md:p-6 md:p-6 md:p-10">
                   <div className="text-center">
                     <p className="text-pink-200 font-mono">
               // kindly rsvp
                     </p>
 
-                    <h2 className="text-4xl font-light mt-4">
+                    <h2 className="text-3xl md:text-3xl md:text-4xl font-light mt-4">
                       Konfirmasi Kehadiran
                     </h2>
 
@@ -740,7 +740,7 @@ export default function WeddingInvitation() {
 
                   setMusicPlaying(!musicPlaying)
                 }}
-                className="fixed top-6 right-6 z-50 bg-pink-200/10 border border-pink-200/20 backdrop-blur-xl rounded-full px-5 py-3 flex items-center gap-3 text-pink-100 shadow-lg shadow-pink-500/10"
+                className="fixed top-4 right-4 md:top-6 md:right-6 z-50 bg-pink-200/10 border border-pink-200/20 backdrop-blur-xl rounded-full px-4 py-2 md:px-5 md:py-3 flex items-center gap-3 text-pink-100 shadow-lg shadow-pink-500/10"
               >
                 <>
                   <Music2 size={18} />
