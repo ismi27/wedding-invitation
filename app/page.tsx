@@ -1,5 +1,6 @@
 "use client"
 
+import FallingPetals from "@/components/FallingPetals"
 import { QRCodeSVG } from "qrcode.react"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
@@ -275,7 +276,7 @@ export default function WeddingInvitation() {
           ) : (
 
             <main className="relative min-h-[100svh] text-white overflow-hidden">
-
+              <FallingPetals />
               {/* GLOBAL BACKGROUND */}
               <div
                 className="fixed inset-0 -z-10 bg-cover bg-top md:bg-center bg-no-repeat"
