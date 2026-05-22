@@ -708,7 +708,7 @@ export default function WeddingInvitation() {
                       <div className="mt-6 flex justify-center">
                         <div className="bg-white p-4 rounded-2xl">
                           <QRCodeSVG
-                            value={`https://domainlu.com/checkin/${generatedGuestId}`}
+                            value={`https://vercel.com/ismi27s-projects/wedding-invitation-ismi-haris/checkin/${generatedGuestId}`}
                             size={220}
                           />
                         </div>
