@@ -11,14 +11,18 @@ import {
   Heart,
   Send,
   GitBranch,
-  Volume2,
-  VolumeX,
   Music2,
   PauseCircle,
   PlayCircle,
+  Gift,
+  Copy,
 } from "lucide-react"
 
 export default function WeddingInvitation() {
+  const copyToClipboard = (text: string) => {
+    navigator.clipboard.writeText(text)
+    alert("✨ Nomor rekening berhasil disalin")
+  }
   const [generatedGuestId, setGeneratedGuestId] =
     useState("")
   const [opened, setOpened] = useState(false)
@@ -757,6 +761,149 @@ export default function WeddingInvitation() {
                   )}
                 </>
               </button>
+              <section className="relative z-10 px-5 md:px-10 py-20">
+                <div className="max-w-6xl mx-auto">
+
+                  {/* CARD */}
+                  <div className="relative overflow-hidden rounded-[40px] border border-pink-200/10 bg-white/5 backdrop-blur-2xl shadow-[0_0_80px_rgba(236,72,153,0.08)] p-8 md:p-14">
+
+                    {/* GLOW */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-pink-400/5 via-transparent to-purple-500/5 pointer-events-none" />
+
+                    {/* TITLE */}
+                    <div className="text-center relative z-10">
+                      <p className="text-pink-200/70 tracking-[0.3em] text-sm font-mono">
+          // wedding gift
+                      </p>
+
+                      <h2 className="mt-4 text-3xl md:text-5xl font-light text-white">
+                        ✨ Send Your Blessing
+                      </h2>
+
+                      <p className="mt-6 text-pink-100/70 leading-relaxed max-w-2xl mx-auto">
+                        Kehadiran dan doa Anda adalah hadiah terindah bagi kami.
+                        Namun jika ingin mengirim tanda kasih,
+                        kami dengan senang hati menerimanya.
+                      </p>
+                    </div>
+
+                    {/* CONTENT */}
+                    <div className="grid md:grid-cols-2 gap-8 mt-14 relative z-10">
+
+                      {/* DIGITAL GIFT */}
+                      <div className="rounded-3xl border border-pink-200/10 bg-[#ffffff08] p-8">
+
+                        <div className="flex items-center gap-3 text-pink-200">
+                          <Gift />
+                          <h3 className="text-2xl font-semibold">
+                            Digital Gift
+                          </h3>
+                        </div>
+
+                        {/* ISMI */}
+                        <div className="mt-8 rounded-2xl border border-pink-300/10 bg-black/10 p-6">
+                          <p className="text-sm text-pink-100/50">
+                            BCA • Ismi Rizki Sopiyanti
+                          </p>
+
+                          <h4 className="mt-3 text-2xl font-bold tracking-widest text-white">
+                            1234567890
+                          </h4>
+
+                          <button
+                            onClick={() => copyToClipboard("1234567890")}
+                            className="mt-5 px-5 py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white font-medium hover:scale-105 transition-all"
+                          >
+                            <div className="flex items-center gap-2">
+                              <Copy size={18} />
+                              Salin Rekening
+                            </div>
+                          </button>
+                        </div>
+
+                        {/* HARIS */}
+                        <div className="mt-6 rounded-2xl border border-pink-300/10 bg-black/10 p-6">
+                          <p className="text-sm text-pink-100/50">
+                            Mandiri • Abdul Haris
+                          </p>
+
+                          <h4 className="mt-3 text-2xl font-bold tracking-widest text-white">
+                            9876543210
+                          </h4>
+
+                          <button
+                            onClick={() => copyToClipboard("9876543210")}
+                            className="mt-5 px-5 py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white font-medium hover:scale-105 transition-all"
+                          >
+                            <div className="flex items-center gap-2">
+                              <Copy size={18} />
+                              Salin Rekening
+                            </div>
+                          </button>
+                        </div>
+                      </div>
+
+                      {/* PHYSICAL GIFT */}
+                      <div className="rounded-3xl border border-pink-200/10 bg-[#ffffff08] p-8">
+
+                        <div className="flex items-center gap-3 text-pink-200">
+                          <MapPin />
+                          <h3 className="text-2xl font-semibold">
+                            Physical Gift
+                          </h3>
+                        </div>
+
+                        {/* ISMI */}
+                        <div className="mt-8 rounded-2xl border border-pink-300/10 bg-black/10 p-6">
+                          <p className="text-sm text-pink-100/50">
+                            Untuk Ismi
+                          </p>
+
+                          <p className="mt-4 text-white leading-relaxed">
+                            Jl. Melati Indah No. 10<br />
+                            Bandung, Jawa Barat
+                          </p>
+
+                          <a
+                            href="https://maps.google.com"
+                            target="_blank"
+                            className="inline-block mt-5 px-5 py-3 rounded-full bg-white/10 border border-pink-200/10 text-pink-100 hover:bg-white/20 transition-all"
+                          >
+                            Lihat Lokasi
+                          </a>
+                        </div>
+
+                        {/* HARIS */}
+                        <div className="mt-6 rounded-2xl border border-pink-300/10 bg-black/10 p-6">
+                          <p className="text-sm text-pink-100/50">
+                            Untuk Haris
+                          </p>
+
+                          <p className="mt-4 text-white leading-relaxed">
+                            Jl. Mawar Elok No. 22<br />
+                            Bandung, Jawa Barat
+                          </p>
+
+                          <a
+                            href="https://maps.google.com"
+                            target="_blank"
+                            className="inline-block mt-5 px-5 py-3 rounded-full bg-white/10 border border-pink-200/10 text-pink-100 hover:bg-white/20 transition-all"
+                          >
+                            Lihat Lokasi
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* FOOTER */}
+                    <div className="mt-14 text-center relative z-10">
+                      <p className="text-pink-100/60 tracking-wide">
+                        ✨ Every blessing means the world to us ✨
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </main>
           )}
         </>
