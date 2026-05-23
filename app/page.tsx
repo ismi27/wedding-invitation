@@ -1412,7 +1412,7 @@ lg:grid-cols-2
                           </div>
 
                           <p className="mt-4 text-sm text-pink-100/60 leading-relaxed">
-                            Untuk pengiriman hadiah fisik ✨
+                            Untuk pengiriman hadiah
                           </p>
 
                           <div
@@ -1426,13 +1426,13 @@ lg:grid-cols-2
                           >
 
                             <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
-                              Jl. Melati Indah No. 10
+                              Jl. Cakung Cilincing Barat No.22, RT 016 RW 04 Kel. Cakung Barat Kec. Cakung 13910
                               <br />
-                              Bandung, Jawa Barat
+                              Jakarta Timur
                             </p>
 
                             <a
-                              href="https://maps.google.com"
+                              href="https://maps.app.goo.gl/ek7ye7vLX6LRDgu29"
                               target="_blank"
                               className="
           inline-flex
@@ -1503,8 +1503,26 @@ lg:grid-cols-2
 >
   ✨ Every blessing means the world to us ✨
 </p>
+
                     </div>
+
                   </div>
+                   <p
+      className="
+        mt-10
+
+        text-sm
+        md:text-base
+
+        text-pink-100/60
+
+        font-mono
+
+        tracking-[0.2em]
+      "
+    >
+      © 2026 Ismi & Haris — Powered by Love 
+    </p>
                 </div>
               </section>
             </main>
