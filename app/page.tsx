@@ -20,7 +20,7 @@ import {
 export default function WeddingInvitation() {
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text)
-    alert("✨ Nomor rekening berhasil disalin")
+    alert("✨ Berhasil disalin")
   }
   const [opened, setOpened] = useState(false)
   const [guestName, setGuestName] = useState("")
@@ -190,22 +190,36 @@ export default function WeddingInvitation() {
           {!opened ? (
             <div className="relative min-h-[100svh] text-white flex items-center justify-center px-6 overflow-hidden">
 
-              {/* BACKGROUND IMAGE */}
               <div
-                className="
-absolute inset-0
-bg-no-repeat
-bg-center
-bg-contain
-md:bg-cover
-scale-110 md:scale-100
-"                style={{
-                  backgroundImage: "url('/images/gate-bg.png')",
-                  backgroundSize: window.innerWidth < 768
-                    ? "contain"
-                    : "cover",
-                }}
-              />
+                className="absolute inset-0 -z-10"
+              >
+                {/* Desktop */}
+                <div
+                  className="
+      hidden md:block
+      absolute inset-0
+      bg-cover bg-center bg-no-repeat
+    "
+                  style={{
+                    backgroundImage: "url('/images/gate-bg.png')",
+                  }}
+                />
+
+                {/* Mobile */}
+                <div
+                  className="
+      block md:hidden
+      absolute inset-0
+      bg-cover bg-center bg-no-repeat
+    "
+                  style={{
+                    backgroundImage: "url('/images/mobile-gate-bg.png')",
+                  }}
+                />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-[#12051f]/60" />
+              </div>
 
               {/* DARK OVERLAY */}
               <div className="absolute inset-0 bg-[#140F22]/55" />
@@ -305,17 +319,37 @@ scale-110 md:scale-100
             <main className="relative min-h-[100svh] text-white overflow-hidden">
               <FallingPetals />
               {/* GLOBAL BACKGROUND */}
-              <div
-                className="fixed inset-0 -z-10 bg-cover bg-top md:bg-center bg-no-repeat"
-                style={{
-                  backgroundImage: "url('/images/fantasy-bg.png')",
-                  backgroundAttachment: "fixed",
-                }}
-              >
+              <div className="fixed inset-0 -z-10">
+
+                {/* DESKTOP BACKGROUND */}
+                <div
+                  className="
+      hidden md:block
+      absolute inset-0
+      bg-cover bg-center bg-no-repeat
+    "
+                  style={{
+                    backgroundImage: "url('/images/fantasy-bg.png')",
+                    backgroundAttachment: "fixed",
+                  }}
+                />
+
+                {/* MOBILE BACKGROUND */}
+                <div
+                  className="
+      block md:hidden
+      absolute inset-0
+      bg-cover bg-top bg-no-repeat
+    "
+                  style={{
+                    backgroundImage: "url('/images/mobile-fantasy-bg.png')",
+                  }}
+                />
+
                 {/* DARK OVERLAY */}
                 <div className="absolute inset-0 bg-[#140F22]/70" />
 
-                {/* EXTRA GLOW */}
+                {/* GLOW EFFECT */}
                 <div className="absolute left-[-200px] top-[10%] w-[500px] h-[500px] bg-pink-400/20 blur-[140px] rounded-full" />
 
                 <div className="absolute right-[-200px] bottom-[10%] w-[500px] h-[500px] bg-fuchsia-400/20 blur-[140px] rounded-full" />
@@ -336,8 +370,6 @@ scale-110 md:scale-100
                 {/* RIGHT GLOW */}
                 <div className="absolute right-[-100px] bottom-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-fuchsia-400/20 blur-[120px] rounded-full" />
 
-                {/* STARS */}
-                <div className="absolute inset-0 opacity-30 bg-[url('/images/stars.png')] bg-cover" />
 
                 <div className="absolute top-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-8 left-8 flex items-center justify-center gap-2 text-pink-200 font-mono text-sm z-20">
                   <span>👑</span>
@@ -415,14 +447,41 @@ scale-110 md:scale-100
                 </motion.div>
               </motion.section>
               <section className="px-6 py-12">
-                <div className="max-w-3xl mx-auto">
+                <div className="max-w-3xl mx-auto flex justify-center">
 
-                  <div className="relative bg-white p-4 rounded-t-[200px] overflow-hidden border-[6px] border-white/10 h-[380px] md:h-[600px]">
+                  <div
+                    className="
+        relative
+
+        w-[85%] md:w-[70%]
+
+        rounded-t-[80px] md:rounded-t-[120px]
+        rounded-b-[20px]
+
+        border border-pink-200/30
+
+        shadow-[0_0_30px_rgba(255,192,203,0.15)]
+
+        overflow-hidden
+      "
+                  >
                     <Image
-                      src="/images/sample_images.png"
-                      alt="Couple"
-                      fill
-                      className="object-contain" />
+                      src="/images/fotoberdua3.jpg"
+                      alt="Prewedding"
+                      width={900}
+                      height={1200}
+                      className="
+          w-full
+          h-auto
+
+          object-contain
+
+          block
+
+          rounded-t-[80px] md:rounded-t-[120px]
+          rounded-b-[20px]
+        "
+                    />
                   </div>
 
                 </div>
@@ -449,41 +508,11 @@ scale-110 md:scale-100
               <section className="px-6 py-24">
                 <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16">
 
-                  {/* Pengantin Wanita */}
-                  <div className="text-center">
-                    <div className="w-44 h-44 md:w-56 md:h-56 mx-auto rounded-t-[140px] rounded-b-[30px] border-pink-200/30 shadow-2xl shadow-pink-500/20 overflow-hidden border-4 border-white/10 relative">
-                      <Image
-                        src="/images/sample_images.png"
-                        alt="Pengantin Wanita"
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-
-                    <h2 className="text-3xl md:text-4xl font-light mt-8">
-                      Ismi Rizki Sopiyanti
-                    </h2>
-
-                    <p className="mt-4 text-gray-400">
-                      Putri dari keluarga
-                    </p>
-
-                    <p className="text-xl mt-2">
-                      Bpk. [Nama Ayah]
-                      <br />
-                      & Ibu. [Nama Ibu]
-                    </p>
-
-                    <p className="mt-6 text-pink-200 font-mono">
-                      @instagram_ismi
-                    </p>
-                  </div>
-
                   {/* Pengantin Pria */}
                   <div className="text-center">
                     <div className="w-56 h-56 mx-auto rounded-t-[140px] rounded-b-[30px] border-pink-200/30 shadow-2xl shadow-pink-500/20 overflow-hidden border-4 border-white/10 relative">
                       <Image
-                        src="/images/sample_images.png"
+                        src="/images/haris.jpg"
                         alt="Pengantin Pria"
                         fill
                         className="object-cover"
@@ -495,20 +524,106 @@ scale-110 md:scale-100
                     </h2>
 
                     <p className="mt-4 text-gray-400">
-                      Putra dari keluarga
+                      Putra pertama dari keluarga
                     </p>
 
                     <p className="text-xl mt-2">
-                      Bpk. [Nama Ayah]
+                      Bpk. Lukmanil Hakim
                       <br />
-                      & Ibu. [Nama Ibu]
+                      & Ibu. Nurmawilis
                     </p>
 
-                    <p className="mt-6 text-pink-200 font-mono">
-                      @instagram_haris
-                    </p>
+                    <a
+                      href="https://instagram.com/abdharis97"
+                      target="_blank"
+                      className="
+    mt-6
+    inline-flex
+    items-center
+    gap-2
+    text-pink-200
+    font-mono
+    hover:text-pink-100
+    transition
+  "
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37a4 4 0 1 1-4.63-4.63 4 4 0 0 1 4.63 4.63z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                      </svg>
+
+                      abdharis97
+                    </a>
                   </div>
+                  {/* Pengantin Wanita */}
+                  <div className="text-center">
+                    <div className="w-44 h-44 md:w-56 md:h-56 mx-auto rounded-t-[140px] rounded-b-[30px] border-pink-200/30 shadow-2xl shadow-pink-500/20 overflow-hidden border-4 border-white/10 relative">
+                      <Image
+                        src="/images/ismi.jpg"
+                        alt="Pengantin Wanita"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
 
+                    <h2 className="text-3xl md:text-4xl font-light mt-8">
+                      Ismi Rizki Sopiyanti
+                    </h2>
+
+                    <p className="mt-4 text-gray-400">
+                      Putri pertama dari keluarga
+                    </p>
+
+                    <p className="text-xl mt-2">
+                      Bpk. Abdul Rozak
+                      <br />
+                      & Ibu. Sopikha
+                    </p>
+
+                    <a
+                      href="https://instagram.com/itsmerizzkis"
+                      target="_blank"
+                      className="
+    mt-6
+    inline-flex
+    items-center
+    gap-2
+    text-pink-200
+    font-mono
+    hover:text-pink-100
+    transition
+  "
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      >
+                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                        <path d="M16 11.37a4 4 0 1 1-4.63-4.63 4 4 0 0 1 4.63 4.63z" />
+                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+                      </svg>
+
+                      itsmerizzkis
+                    </a>
+                  </div>
                 </div>
               </section>
 
@@ -521,55 +636,308 @@ scale-110 md:scale-100
                     one future.”
                   </p>
 
-                  <p className="mt-6 text-center text-gray-400 font-mono text-sm">
-                    status: ready for forever ❤️
+                  <p
+                    className="
+    mt-3
+    text-sm
+    md:text-base
+    font-mono
+    tracking-[0.3em]
+    uppercase
+
+    text-pink-300
+text-center
+    drop-shadow-[0_0_10px_rgba(255,192,203,0.45)]
+  "
+                  >
+                    status: ready for forever
                   </p>
                 </div>
               </section>
 
               {/* EVENT */}
-              <section className="px-6 py-24 relative">
-                <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-6">
-                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl p-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-8">
-                    <div className="flex items-center gap-3 text-pink-200">
-                      <CalendarDays />
-                      <h2 className="text-lg md:text-2xl font-semibold">Akad Nikah</h2>
-                    </div>
+              <section className="px-6 py-20 relative">
 
-                    <div className="mt-6 space-y-2 text-gray-300">
-                      <p>Minggu, 28 Juni 2026</p>
-                      <p>09.00 WIB</p>
-                    </div>
+                <div className="max-w-6xl mx-auto">
+
+                  {/* TITLE */}
+                  <div className="text-center mb-10">
+                    <p className="text-pink-200 font-mono tracking-[0.3em] text-sm md:text-base">
+                      ----✦ Save Our Date ✦----
+                    </p>
                   </div>
 
-                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl p-6 md:p-6 md:p-6 md:p-6 md:p-8">
-                    <div className="flex items-center gap-3 text-pink-200">
-                      <MapPin />
-                      <h2 className="text-lg md:text-2xl font-semibold">Resepsi</h2>
+                  <div className="grid md:grid-cols-2 gap-6">
+
+                    {/* AKAD */}
+                    <div
+                      className="
+        relative overflow-hidden
+        rounded-[30px]
+        border border-pink-200/10
+        bg-white/5
+        backdrop-blur-xl
+        px-7 py-8
+      "
+                    >
+
+                      {/* glow */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-pink-400/5 to-fuchsia-400/5" />
+
+                      <div className="relative flex items-center justify-between gap-6 h-full">
+
+                        {/* LEFT SIDE */}
+                        <div className="flex items-center gap-5">
+
+                          {/* ICON */}
+                          <div className="
+              relative
+              w-28 h-28 md:w-40 md:h-40
+              flex-shrink-0
+              opacity-90
+            ">
+                            <Image
+                              src="/images/icons/akad4.png"
+                              alt="Akad"
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
+
+                          {/* TEXT */}
+                          <div>
+
+                            <h2 className="text-2xl md:text-3xl font-semibold text-pink-100">
+                              Akad Nikah
+                            </h2>
+
+                            <div className="mt-6 space-y-4 text-base md:text-lg text-pink-100/80">
+
+                              <p className="flex items-center gap-3">
+                                <CalendarDays size={18} />
+                                Jum'at, 26 Juni 2026
+                              </p>
+
+                              <p className="flex items-center gap-3">
+                                🕘 14.00 WIB - selesai
+                              </p>
+
+                              <p>
+                                Jl. Raya Kayu Tinggi No.7 3, RT.3/RW.3, Cakung Tim., Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13910                            </p>
+
+
+                            </div>
+
+                            <a
+                              href="https://maps.app.goo.gl/69vShTp76bHnfSj59"
+                              target="_blank"
+                              className="
+                inline-flex items-center gap-2
+                mt-7
+                px-6 py-3
+                rounded-full
+                bg-pink-200
+                text-[#1B1527]
+                font-semibold
+                hover:bg-pink-100
+                transition-all
+                shadow-lg shadow-pink-300/20
+              "
+                            >
+                              <MapPin size={18} />
+                              Lihat Lokasi
+                            </a>
+                          </div>
+
+                        </div>
+
+                      </div>
                     </div>
 
-                    <div className="mt-6 space-y-2 text-gray-300">
-                      <p>Gedung Serbaguna Bandung</p>
-                      <p>11.00 WIB - selesai</p>
+                    {/* RESEPSI */}
+                    <div
+                      className="
+        relative overflow-hidden
+        rounded-[30px]
+        border border-pink-200/10
+        bg-white/5
+        backdrop-blur-xl
+        px-7 py-8
+      "
+                    >
+                      {/* SPARKLES */}
+                      <div
+                        className="absolute top-6 left-10 text-pink-200/70 text-xl z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 2.5s ease-in-out infinite",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-                      <a
-                        href="https://maps.app.goo.gl/3bKrRfVPNDVDbZcm7"
-                        target="_blank"
-                        className="inline-flex items-center justify-center gap-2 mt-4 bg-pink-200 text-[#1B1527] px-4 py-2 md:px-5 md:py-3 rounded-xl font-semibold hover:opacity-90 transition shadow-lg shadow-pink-300/30"                  >
-                        <MapPin size={18} />
-                        Lihat Lokasi
-                      </a>
+                      <div
+                        className="absolute top-10 right-16 text-pink-100/70 text-lg z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 3s ease-in-out infinite",
+                          animationDelay: "1s",
+                        }}
+                      >
+                        ✦
+                      </div>
+
+                      <div
+                        className="absolute top-1/2 left-6 text-pink-300/70 text-sm z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 2.8s ease-in-out infinite",
+                          animationDelay: "2s",
+                        }}
+                      >
+                        ✦
+                      </div>
+
+                      <div
+                        className="absolute bottom-10 left-1/4 text-pink-200/60 text-lg z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 3.2s ease-in-out infinite",
+                          animationDelay: "1.5s",
+                        }}
+                      >
+                        ✦
+                      </div>
+
+                      <div
+                        className="absolute bottom-6 right-10 text-pink-100/60 text-xl z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 2.2s ease-in-out infinite",
+                          animationDelay: "2.3s",
+                        }}
+                      >
+                        ✦
+                      </div>
+
+                      <div
+                        className="absolute top-1/3 right-1/3 text-pink-300/50 text-sm z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 3.5s ease-in-out infinite",
+                          animationDelay: "1.8s",
+                        }}
+                      >
+                        ✦
+                      </div>
+
+                      <div
+                        className="absolute bottom-1/3 right-20 text-pink-200/70 text-base z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 2.7s ease-in-out infinite",
+                          animationDelay: "0.8s",
+                        }}
+                      >
+                        ✦
+                      </div>
+
+                      <div
+                        className="absolute top-20 left-1/2 text-pink-100/60 text-xs z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 4s ease-in-out infinite",
+                          animationDelay: "2.7s",
+                        }}
+                      >
+                        ✦
+                      </div>
+
+                      {/* glow */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-pink-400/5 to-fuchsia-400/5" />
+
+                      <div className="relative flex items-center justify-between gap-6 h-full">
+
+                        {/* TEXT */}
+                        <div className="flex-1">
+
+                          <h2 className="text-2xl md:text-3xl font-semibold text-pink-100">
+                            Resepsi
+                          </h2>
+
+                          <div className="mt-6 space-y-4 text-base md:text-lg text-pink-100/80">
+
+                            <p className="flex items-center gap-3">
+                              <CalendarDays size={18} />
+                              Minggu, 28 Juni 2026
+                            </p>
+
+                            <p className="flex items-center gap-3">
+                              🕘 11.00 WIB - selesai
+                            </p>
+
+                            <p>
+                              Jl. Pabrik Kulit No.101, RT.16/RW.4, Cakung Bar., Kec. Cakung, Kota Jakarta Timur, Daerah Khusus Ibukota Jakarta 13910
+                            </p>
+
+                          </div>
+
+                          <a
+                            href="https://maps.app.goo.gl/3bKrRfVPNDVDbZcm7"
+                            target="_blank"
+                            className="
+                inline-flex items-center gap-2
+                mt-7
+                px-6 py-3
+                rounded-full
+                bg-pink-200
+                text-[#1B1527]
+                font-semibold
+                hover:bg-pink-100
+                transition-all
+                shadow-lg shadow-pink-300/20
+              "
+                          >
+                            <MapPin size={18} />
+                            Lihat Lokasi
+                          </a>
+
+                        </div>
+
+                        {/* ICON */}
+                        <div className="
+            relative
+            w-28 h-28 md:w-40 md:h-40
+            flex-shrink-0
+            opacity-90
+            flex items-center justify-center
+          ">
+                          <Image
+                            src="/images/icons/resepsi4.png"
+                            alt="Resepsi"
+                            fill
+                            className="object-contain"
+                          />
+                        </div>
+
+                      </div>
                     </div>
+
                   </div>
                 </div>
               </section>
 
               <section className="px-6 py-12">
                 <div className="max-w-5xl mx-auto">
-                  <div className="flex items-center justify-center gap-2 text-gray-400 text-sm mb-8">
+                  <div className="
+  flex items-center justify-center gap-2
+  text-white
+  text-sm md:text-base
+  mb-8
+  drop-shadow-[0_0_10px_rgba(255,255,255,0.35)]
+">
                     <GitBranch size={16} />
-                    relationship-history.git
-                  </div>
+                    <p className="
+  text-base md:text-lg
+  tracking-[0.2em]
+  text-white
+  font-mono
+  drop-shadow-[0_0_10px_rgba(255,255,255,0.35)]
+">
+                      relationship-history.git
+                    </p>   </div>
 
                   <div className="space-y-8">
                     {[
@@ -604,8 +972,14 @@ scale-110 md:scale-100
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.7 }}
                         viewport={{ once: true }}
-                        className="grid md:grid-cols-2 gap-6 bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl overflow-hidden"
-                      >
+                        className="
+relative overflow-hidden
+bg-white/10
+border border-pink-200/20
+backdrop-blur-xl
+rounded-[28px]
+p-6 md:p-8
+"                      >
                         <div className="relative h-[220px] md:h-[300px]">
                           <Image
                             src={item.image}
@@ -738,11 +1112,39 @@ scale-110 md:scale-100
               {/* FOOTER */}
               <footer className="pb-16 px-6">
                 <div className="text-center text-gray-500 text-sm">
-                  <p>Thank you for being part of our story.</p>
+<p
+  className="
+    text-2xl
+    md:text-3xl
 
-                  <p className="mt-2 font-mono text-pink-200">
-                    marriage.release() → success ❤️
-                  </p>
+    text-pink-100
+
+    font-light
+
+    tracking-wide
+
+    leading-relaxed
+
+    drop-shadow-[0_0_14px_rgba(255,192,203,0.3)]
+  "
+>
+  Thank you for being part of our story.
+</p>
+                  <div className="mt-2 font-mono text-pink-200">
+                    <p
+                      className="
+      mt-3
+      text-lg md:text-2xl
+      font-mono
+      font-semibold
+      tracking-wide
+      text-black-100
+      drop-shadow-[0_0_12px_rgba(255,192,203,0.35)]
+    "
+                    >
+                      marriage.release() → success ❤️
+                    </p>
+                  </div>
                 </div>
               </footer>
               <button
@@ -800,118 +1202,307 @@ scale-110 md:scale-100
                     </div>
 
                     {/* CONTENT */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mt-14 relative z-10">
-
+                    <div
+                      className="
+    grid
+    grid-cols-1
+lg:grid-cols-2
+    gap-6 md:gap-8
+    mt-12 md:mt-14
+    relative z-10
+  "
+                    >
                       {/* DIGITAL GIFT */}
-                      <div className="rounded-3xl border border-pink-200/10 bg-[#ffffff08] p-5 md:p-8">
-
+                      <div
+                        className="
+    rounded-3xl
+    border border-pink-200/10
+    bg-[#ffffff08]
+    backdrop-blur-xl
+    p-5 md:p-8
+    h-full
+  "
+                      >
+                        {/* TITLE */}
                         <div className="flex items-center gap-3 text-pink-200">
                           <Gift />
-                          <h3 className="text-2xl font-semibold">
+
+                          <h3 className="text-xl md:text-2xl font-semibold">
                             Digital Gift
                           </h3>
                         </div>
 
-                        {/* ISMI */}
-                        <div className="mt-8 rounded-2xl border border-pink-300/10 bg-black/10 p-6">
-                          <p className="text-sm text-pink-100/50">
-                            BCA • Ismi Rizki Sopiyanti
-                          </p>
+                        <p className="mt-4 text-sm text-pink-100/60 leading-relaxed">
+                          Kirim tanda kasih secara digital melalui rekening berikut ✨
+                        </p>
 
-                          <h4 className="mt-3 text-2xl font-bold tracking-widest text-white break-all">
-                            1234567890
-                          </h4>
+                        {/* LIST REKENING */}
+                        <div className="mt-8 space-y-5">
 
-                          <button
-                            onClick={() => copyToClipboard("1234567890")}
-                            className="mt-5 px-4 py-2 md:px-5 md:py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white font-medium hover:scale-105 transition-all"
-                          >
-                            <div className="flex items-center justify-center gap-2">
-                              <Copy size={18} />
-                              Salin Rekening
+                          {[
+                            {
+                              bank: "BCA Digital",
+                              logo: "/images/banks/blu.png",
+                              name: "a.n Ismi Rizki Sopiyanti",
+                              number: "006183203745",
+                            },
+                            {
+                              bank: "SeaBank",
+                              logo: "/images/banks/seabank2.png",
+                              name: "a.n Ismi Rizki Sopiyanti",
+                              number: "901639849849",
+                            },
+                            {
+                              bank: "SeaBank",
+                              logo: "/images/banks/seabank2.png",
+                              name: "a.n Abdul Haris",
+                              number: "901256972345",
+                            },
+                            {
+                              bank: "BNI",
+                              logo: "/images/banks/bni2.png",
+                              name: "a.n Abdul Haris",
+                              number: "1775493133",
+                            },
+                          ].map((item, index) => (
+                            <div
+                              key={index}
+                              className="
+          rounded-2xl
+          border border-pink-300/10
+          bg-black/10
+          p-5
+          md:p-6
+        "
+                            >
+                              <div className="flex items-center gap-3">
+
+                                <div className="
+  w-10 h-10
+  rounded-xl
+  bg-white/10
+  flex items-center justify-center
+  overflow-hidden
+  border border-white/10
+  shadow-lg shadow-pink-500/10
+">
+                                  <Image
+                                    src={item.logo}
+                                    alt={item.bank}
+                                    width={28}
+                                    height={28}
+                                    className="object-contain"
+                                  />
+                                </div>
+
+                                <div>
+                                  <p className="text-sm text-pink-100/50">
+                                    {item.bank}
+                                  </p>
+
+                                  <p className="text-sm text-white/80">
+                                    {item.name}
+                                  </p>
+                                </div>
+
+                              </div>
+                              <h4
+                                className="
+            mt-3
+            text-xl md:text-2xl
+            font-bold
+            tracking-widest
+            text-white
+            break-all
+          "
+                              >
+                                {item.number}
+                              </h4>
+
+                              <button
+                                onClick={() =>
+                                  copyToClipboard(item.number)
+                                }
+                                className="
+  mt-5
+  w-full
+  px-4 py-3
+  rounded-2xl
+  bg-pink-200
+  text-[#1B1527]
+  font-medium
+  hover:bg-pink-100
+  transition-all
+  duration-300
+"
+                              >
+                                <div className="flex items-center justify-center gap-2">
+                                  <Copy size={18} />
+                                  Salin Rekening
+                                </div>
+                              </button>
                             </div>
-                          </button>
-                        </div>
-
-                        {/* HARIS */}
-                        <div className="mt-6 rounded-2xl border border-pink-300/10 bg-black/10 p-6">
-                          <p className="text-sm text-pink-100/50">
-                            Mandiri • Abdul Haris
-                          </p>
-
-                          <h4 className="mt-3 text-2xl font-bold tracking-widest text-white break-all">
-                            9876543210
-                          </h4>
-
-                          <button
-                            onClick={() => copyToClipboard("9876543210")}
-                            className="mt-5 px-4 py-2 md:px-5 md:py-3 rounded-full bg-gradient-to-r from-pink-400 to-purple-500 text-white font-medium hover:scale-105 transition-all"
-                          >
-                            <div className="flex items-center justify-center gap-2">
-                              <Copy size={18} />
-                              Salin Rekening
-                            </div>
-                          </button>
+                          ))}
                         </div>
                       </div>
+                      {/* RIGHT COLUMN */}
+                      <div className="flex flex-col gap-6 md:gap-8">
 
-                      {/* PHYSICAL GIFT */}
-                      <div className="rounded-3xl border border-pink-200/10 bg-[#ffffff08] p-5 md:p-8">
+                        {/* QR GIFT */}
+                        <div
+                          className="
+      rounded-3xl
+      border border-pink-200/10
+      bg-[#ffffff08]
+      backdrop-blur-xl
+      p-5 md:p-8
+      flex flex-col
+      items-center
+      text-center
+    "
+                        >
+                          <div>
+                            <div className="flex items-center justify-center gap-3 text-pink-200">
+                              <Gift />
 
-                        <div className="flex items-center gap-3 text-pink-200">
-                          <MapPin />
-                          <h3 className="text-2xl font-semibold">
-                            Physical Gift
-                          </h3>
+                              <h3 className="text-xl md:text-2xl font-semibold">
+                                Instant QR Gift
+                              </h3>
+                            </div>
+
+                            <p className="mt-4 text-sm text-pink-100/60 leading-relaxed">
+                              Scan QR berikut untuk mengirim tanda kasih secara praktis ✨
+                            </p>
+                          </div>
+
+                          <div className="mt-10 flex justify-center">
+                            <div className="bg-white p-4 rounded-3xl shadow-2xl shadow-pink-500/10">
+                              <Image
+                                src="/images/qris.png"
+                                alt="QRIS"
+                                width={220}
+                                height={220}
+                                className="rounded-2xl"
+                              />
+                            </div>
+                          </div>
+
+                          <p className="mt-8 text-sm text-pink-100/50 text-center">
+                            ABDUL HARIS, DIGITAL & KREATIF
+                          </p>
                         </div>
 
-                        {/* ISMI */}
-                        <div className="mt-8 rounded-2xl border border-pink-300/10 bg-black/10 p-6">
-                          <p className="text-sm text-pink-100/50">
-                            Untuk Ismi
+                        {/* PHYSICAL GIFT */}
+                        <div
+                          className="
+      rounded-3xl
+      border border-pink-200/10
+      bg-[#ffffff08]
+      backdrop-blur-xl
+      p-5 md:p-8
+      flex-1
+    "
+                        >
+                          <div className="flex items-center gap-3 text-pink-200">
+                            <MapPin />
+
+                            <h3 className="text-xl md:text-2xl font-semibold">
+                              Physical Gift
+                            </h3>
+                          </div>
+
+                          <p className="mt-4 text-sm text-pink-100/60 leading-relaxed">
+                            Untuk pengiriman hadiah fisik ✨
                           </p>
 
-                          <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
-                            Jl. Melati Indah No. 10<br />
-                            Bandung, Jawa Barat
-                          </p>
-
-                          <a
-                            href="https://maps.google.com"
-                            target="_blank"
-                            className="inline-block mt-5 px-4 py-2 md:px-5 md:py-3 rounded-full bg-white/10 border border-pink-200/10 text-pink-100 hover:bg-white/20 transition-all"
+                          <div
+                            className="
+        mt-8
+        rounded-2xl
+        border border-pink-300/10
+        bg-black/10
+        p-5 md:p-6
+      "
                           >
-                            Lihat Lokasi
-                          </a>
+
+                            <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
+                              Jl. Melati Indah No. 10
+                              <br />
+                              Bandung, Jawa Barat
+                            </p>
+
+                            <a
+                              href="https://maps.google.com"
+                              target="_blank"
+                              className="
+          inline-flex
+          items-center
+          justify-center
+          mt-5
+          w-full
+          px-4 py-3
+          rounded-2xl
+          bg-white/10
+          border border-pink-200/10
+          text-pink-100
+          hover:bg-white/20
+          transition-all
+        "
+                            >
+                              Lihat Lokasi
+                            </a>
+                            <button
+                              onClick={() =>
+                                copyToClipboard(
+                                  "Jl. Melati Indah No. 10, Bandung, Jawa Barat"
+                                )
+                              }
+                              className="
+    inline-flex
+    items-center
+    justify-center
+    mt-4
+    w-full
+    px-4 py-3
+    rounded-2xl
+    bg-pink-200
+    text-[#1B1527]
+    font-medium
+    hover:bg-pink-100
+    transition-all
+  "
+                            >
+                              <Copy size={18} className="mr-2" />
+                              Salin Alamat
+                            </button>
+                          </div>
                         </div>
 
-                        {/* HARIS */}
-                        <div className="mt-6 rounded-2xl border border-pink-300/10 bg-black/10 p-6">
-                          <p className="text-sm text-pink-100/50">
-                            Untuk Haris
-                          </p>
-
-                          <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
-                            Jl. Mawar Elok No. 22<br />
-                            Bandung, Jawa Barat
-                          </p>
-
-                          <a
-                            href="https://maps.google.com"
-                            target="_blank"
-                            className="inline-block mt-5 px-4 py-2 md:px-5 md:py-3 rounded-full bg-white/10 border border-pink-200/10 text-pink-100 hover:bg-white/20 transition-all"
-                          >
-                            Lihat Lokasi
-                          </a>
-                        </div>
                       </div>
+
                     </div>
+
 
                     {/* FOOTER */}
                     <div className="mt-14 text-center relative z-10">
-                      <p className="text-pink-100/60 tracking-wide text-sm md:text-base">
-                        ✨ Every blessing means the world to us ✨
-                      </p>
+                     <p
+  className="
+    text-xl
+    md:text-3xl
+
+    text-pink-100
+
+    font-medium
+
+    tracking-wide
+
+    leading-relaxed
+
+    drop-shadow-[0_0_16px_rgba(255,192,203,0.35)]
+  "
+>
+  ✨ Every blessing means the world to us ✨
+</p>
                     </div>
                   </div>
                 </div>
