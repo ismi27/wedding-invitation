@@ -135,7 +135,10 @@ export default function WeddingInvitation() {
       )
 
       setSuccess(true)
-      const whatsappMessage = `
+    const cleanUcapan = formData.ucapan
+  .replace(/[^\p{L}\p{N}\p{P}\p{Z}\n]/gu, "")
+
+const whatsappMessage = `
 Halo Abdul Haris & Ismi ✨
 
 Saya telah mengisi RSVP untuk acara pernikahan.
@@ -150,7 +153,7 @@ Jumlah Tamu:
 ${formData.jumlahTamu} Orang
 
 Ucapan:
-${formData.ucapan}
+${cleanUcapan}
 `
 
       window.open(
