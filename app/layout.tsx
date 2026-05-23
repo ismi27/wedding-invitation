@@ -15,10 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "The Wedding Of Ismi & Haris",
   description: "At 28 June 2026",
-  icons: {
-    icon: "/favicon.ico",
-  },
-};
+}
 
 export default function RootLayout({
   children,
