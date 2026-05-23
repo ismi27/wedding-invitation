@@ -1112,25 +1112,33 @@ bg-white/5
                       {
                         year: "2021",
                         title: "first_meet()",
-                        image: "/images/sample_images.png",
+                        image: "/images/1st_meet.JPG",
                         desc: "Awal pertama kali bertemu.",
                       },
                       {
                         year: "2022",
                         title: "becoming_close()",
-                        image: "/images/sample_image.jpg",
+                        images: [
+                          "/images/2nd_meet.JPG",
+                          "/images/2nd_meet4.JPG",
+                          "/images/2nd_meet3.JPG",
+                        ],
                         desc: "Mulai mengenal satu sama lain lebih dekat.",
                       },
                       {
                         year: "2023",
                         title: "falling_in_love()",
-                        image: "/images/sample_image.jpg",
-                        desc: "Perjalanan penuh cerita dan kebahagiaan.",
+                        images: [
+                          "/images/3rd_meet.JPG",
+                          "/images/3rd_meet4.JPG",
+                          "/images/3rd_meet3.JPG",
+                        ],
+                        desc: "Mulai mengenal satu sama lain lebih dekat.",
                       },
                       {
                         year: "2026",
                         title: "marriage_release_v1.0.0",
-                        image: "/images/sample_image.jpg",
+                        image: "/images/4th_meet_5.JPG",
                         desc: "Siap memulai perjalanan baru bersama.",
                       },
                     ].map((item, index) => (
@@ -1148,13 +1156,40 @@ backdrop-blur-xl
 rounded-[28px]
 p-6 md:p-8
 "                      >
-                        <div className="relative h-[220px] md:h-[300px]">
-                          <Image
-                            src={item.image}
-                            alt={item.title}
-                            fill
-                            className="object-cover hover:scale-105 transition duration-700"
-                          />
+                        <div
+                          className={`
+    grid gap-4
+    ${item.images ? "grid-cols-2 md:grid-cols-3" : "grid-cols-1"}
+  `}
+                        >
+                          {(item.images || [item.image]).map((img, imgIndex) => (
+                            <div
+                              key={imgIndex}
+                              className="
+        relative
+        h-[320px]
+        md:h-[420px]
+        overflow-hidden
+        rounded-2xl
+      "
+                            >
+                              <Image
+                                src={img}
+                                alt={item.title}
+                                fill
+                                className={`
+  object-cover
+  hover:scale-105
+  transition
+  duration-700
+  ${item.title === "marriage_release_v1.0.0"
+                                    ? "object-[center_68%]"
+                                    : "object-center"
+                                  }
+`}
+                              />
+                            </div>
+                          ))}
                         </div>
 
                         <div className="p-6 md:p-6 md:p-6 md:p-6 md:p-5 md:p-8 flex flex-col justify-center">
@@ -1280,8 +1315,8 @@ p-6 md:p-8
               {/* FOOTER */}
               <footer className="pb-16 px-6">
                 <div className="text-center text-gray-500 text-sm">
-                  <p
-                    className="
+                                    <p
+                                      className="
     text-2xl
     md:text-3xl
 
@@ -1295,9 +1330,9 @@ p-6 md:p-8
 
     drop-shadow-[0_0_14px_rgba(255,192,203,0.3)]
   "
-                  >
-                    Thank you for being part of our story.
-                  </p>
+                                    >
+                                      Thank you for being part of our story.
+                                    </p>
                   <div className="mt-2 font-mono text-pink-200">
                     <p
                       className="
@@ -1580,7 +1615,7 @@ lg:grid-cols-2
                           </div>
 
                           <p className="mt-4 text-sm text-pink-100/60 leading-relaxed">
-                            Untuk pengiriman hadiah
+                            Untuk pengiriman hadiah fisik ✨
                           </p>
 
                           <div
@@ -1594,13 +1629,13 @@ lg:grid-cols-2
                           >
 
                             <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
-                              Jl. Cakung Cilincing Barat No.22, RT 016 RW 04 Kel. Cakung Barat Kec. Cakung 13910
+                              Jl. Melati Indah No. 10
                               <br />
-                              Jakarta Timur
+                              Bandung, Jawa Barat
                             </p>
 
                             <a
-                              href="https://maps.app.goo.gl/ek7ye7vLX6LRDgu29"
+                              href="https://maps.google.com"
                               target="_blank"
                               className="
           inline-flex
@@ -1653,8 +1688,8 @@ lg:grid-cols-2
 
                     {/* FOOTER */}
                     <div className="mt-14 text-center relative z-10">
-                      <p
-                        className="
+                       <p
+                                              className="
     text-xl
     md:text-3xl
 
@@ -1668,12 +1703,10 @@ lg:grid-cols-2
 
     drop-shadow-[0_0_16px_rgba(255,192,203,0.35)]
   "
-                      >
-                        ✨ Every blessing means the world to us ✨
-                      </p>
-
+                                            >
+                                              ✨ Every blessing means the world to us ✨
+                                            </p>
                     </div>
-
                   </div>
                   <p
                     className="
