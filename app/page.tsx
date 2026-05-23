@@ -151,7 +151,7 @@ export default function WeddingInvitation() {
 
 
       window.open(
-        `https://wa.me/6281234567890?text=${encodeURIComponent(
+        `https://wa.me/6285928052074?text=${encodeURIComponent(
           whatsappMessage
         )}`,
         "_blank"
