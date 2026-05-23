@@ -466,7 +466,7 @@ export default function WeddingInvitation() {
       "
                   >
                     <Image
-                      src="/images/fotoberdua3.jpg"
+                      src="/images/fotoberdua4.jpg"
                       alt="Prewedding"
                       width={900}
                       height={1200}
