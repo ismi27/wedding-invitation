@@ -135,6 +135,30 @@ export default function WeddingInvitation() {
       )
 
       setSuccess(true)
+      const whatsappMessage = `
+Halo Abdul Haris & Ismi ✨
+
+Saya telah mengisi RSVP untuk acara pernikahan.
+
+Nama:
+${formData.nama}
+
+Kehadiran:
+${formData.kehadiran}
+
+Jumlah Tamu:
+${formData.jumlahTamu} Orang
+
+Ucapan:
+${formData.ucapan}
+`
+
+      window.open(
+        `https://wa.me/6285928052074?text=${encodeURIComponent(
+          whatsappMessage
+        )}`,
+        "_blank"
+      )
       setGeneratedGuestId(guestId)
 
       setFormData({
@@ -702,7 +726,7 @@ export default function WeddingInvitation() {
                     <div className="mt-8 text-center">
 
                       <p className="text-pink-200">
-                        RSVP berhasil dikirim ❤️
+                        RSVP berhasil didata ❤️
                       </p>
 
                       <div className="mt-6 flex justify-center">
