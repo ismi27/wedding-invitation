@@ -1,7 +1,6 @@
 "use client"
 
 import FallingPetals from "@/components/FallingPetals"
-import { QRCodeSVG } from "qrcode.react"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
@@ -23,8 +22,6 @@ export default function WeddingInvitation() {
     navigator.clipboard.writeText(text)
     alert("✨ Nomor rekening berhasil disalin")
   }
-  const [generatedGuestId, setGeneratedGuestId] =
-    useState("")
   const [opened, setOpened] = useState(false)
   const [guestName, setGuestName] = useState("")
   const weddingDate = new Date("2026-06-28T09:00:00")
@@ -117,8 +114,6 @@ export default function WeddingInvitation() {
     setLoading(true)
 
     try {
-      const guestId =
-        Math.random().toString(36).substring(2, 8).toUpperCase()
       await fetch(
         "https://script.google.com/macros/s/AKfycbzwzrvzjBWRh7jmqdngS5SUlIigveZR6w_sPngDFC65pWDeHwYqYaMGhcffBu-WjyIA/exec",
         {
@@ -129,7 +124,6 @@ export default function WeddingInvitation() {
           },
           body: JSON.stringify({
             ...formData,
-            guestId,
           }),
         }
       )
@@ -156,7 +150,6 @@ export default function WeddingInvitation() {
         )}`,
         "_blank"
       )
-      setGeneratedGuestId(guestId)
 
       setFormData({
         nama: "",
@@ -199,9 +192,18 @@ export default function WeddingInvitation() {
 
               {/* BACKGROUND IMAGE */}
               <div
-                className="absolute inset-0 bg-cover bg-top md:bg-center bg-no-repeat"
-                style={{
+                className="
+absolute inset-0
+bg-no-repeat
+bg-center
+bg-contain
+md:bg-cover
+scale-110 md:scale-100
+"                style={{
                   backgroundImage: "url('/images/gate-bg.png')",
+                  backgroundSize: window.innerWidth < 768
+                    ? "contain"
+                    : "cover",
                 }}
               />
 
@@ -720,25 +722,14 @@ export default function WeddingInvitation() {
                       {loading ? "Mengirim..." : "Kirim RSVP"}                </button>
                   </form>
                   {success && (
-                    <div className="mt-8 text-center">
-
-                      <p className="text-pink-200">
-                        RSVP berhasil didata ❤️
+                    <div className="mt-6 text-center">
+                      <p className="text-pink-200 text-lg">
+                        RSVP berhasil dikirim ✨
                       </p>
 
-                      <div className="mt-6 flex justify-center">
-                        <div className="bg-white p-4 rounded-2xl">
-                          <QRCodeSVG
-                            value={`${window.location.origin}/checkin/${generatedGuestId}`}
-                            size={220}
-                          />
-                        </div>
-                      </div>
-
-                      <p className="mt-4 text-pink-100/70 text-sm">
-                        Tunjukkan QR ini saat menghadiri acara
+                      <p className="mt-2 text-pink-100/70 text-sm">
+                        Terima kasih atas sudah mengisi form ini ❤️
                       </p>
-
                     </div>
                   )}
                 </div>
