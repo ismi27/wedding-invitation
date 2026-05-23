@@ -135,29 +135,23 @@ export default function WeddingInvitation() {
       )
 
       setSuccess(true)
-    const cleanUcapan = formData.ucapan
-  .replace(/[^\p{L}\p{N}\p{P}\p{Z}\n]/gu, "")
+      const whatsappMessage = [
+        "Halo Abdul Haris & Ismi ✨",
+        "",
+        "Saya telah mengisi RSVP untuk acara pernikahan.",
+        "",
+        `Nama:\n${formData.nama}`,
+        "",
+        `Kehadiran:\n${formData.kehadiran}`,
+        "",
+        `Jumlah Tamu:\n${formData.jumlahTamu} Orang`,
+        "",
+        `Ucapan:\n${formData.ucapan}`,
+      ].join("\n")
 
-const whatsappMessage = `
-Halo Abdul Haris & Ismi ✨
-
-Saya telah mengisi RSVP untuk acara pernikahan.
-
-Nama:
-${formData.nama}
-
-Kehadiran:
-${formData.kehadiran}
-
-Jumlah Tamu:
-${formData.jumlahTamu} Orang
-
-Ucapan:
-${cleanUcapan}
-`
 
       window.open(
-        `https://wa.me/6285928052074?text=${encodeURIComponent(
+        `https://wa.me/6281234567890?text=${encodeURIComponent(
           whatsappMessage
         )}`,
         "_blank"
