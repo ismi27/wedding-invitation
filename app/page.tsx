@@ -4,6 +4,7 @@ import FallingPetals from "@/components/FallingPetals"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react";
+import { MoveHorizontal } from "lucide-react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import Image from "next/image"
@@ -1158,46 +1159,84 @@ rounded-[28px]
 p-6 md:p-8
 "                      >
                         {item.images ? (
-                          <Swiper
-                            modules={[Autoplay]}
-                            spaceBetween={16}
-                            slidesPerView={1}
-                            centeredSlides={true}
-                            loop={true}
-                            speed={6000}
-                            autoplay={{
-                              delay: 2500,
-                              disableOnInteraction: false,
-                              pauseOnMouseEnter: false,
-                            }}
-                            breakpoints={{
-                              768: {
-                                slidesPerView: 2.2,
-                              },
-                            }}
-                            className="w-full overflow-hidden"
-                          >
-                            {item.images.map((img, imgIndex) => (
-                              <SwiperSlide key={imgIndex}>
-                                <div
-                                  className="
-          relative
-          h-[420px]
-          md:h-[500px]
-          overflow-hidden
-          rounded-2xl
-        "
-                                >
-                                  <Image
-                                    src={img}
-                                    alt={item.title}
-                                    fill
-                                    className="object-cover"
-                                  />
-                                </div>
-                              </SwiperSlide>
-                            ))}
-                          </Swiper>
+                          <div className="relative">
+                            <Swiper
+                              modules={[Autoplay]}
+                              spaceBetween={16}
+                              slidesPerView={1}
+                              centeredSlides={true}
+                              loop={true}
+                              speed={6000}
+                              autoplay={{
+                                delay: 2500,
+                                disableOnInteraction: false,
+                                pauseOnMouseEnter: false,
+                              }}
+                              breakpoints={{
+                                768: {
+                                  slidesPerView: 2.2,
+                                },
+                              }}
+                              className="w-full overflow-hidden"
+                            >
+                              {item.images.map((img, imgIndex) => (
+                                <SwiperSlide key={imgIndex}>
+                                  <div
+                                    className="
+            relative
+            h-[420px]
+            md:h-[500px]
+            overflow-hidden
+            rounded-2xl
+          "
+                                  >
+                                    <Image
+                                      src={img}
+                                      alt={item.title}
+                                      fill
+                                      className="
+              object-cover
+              hover:scale-105
+              transition
+              duration-700
+            "
+                                    />
+                                  </div>
+                                </SwiperSlide>
+                              ))}
+                            </Swiper>
+
+                            {/* gradient kiri */}
+                            <div className="absolute top-0 left-0 h-full w-10 bg-gradient-to-r from-[#3b214f] to-transparent z-10 pointer-events-none" />
+
+                            {/* gradient kanan */}
+                            <div className="absolute top-0 right-0 h-full w-10 bg-gradient-to-l from-[#3b214f] to-transparent z-10 pointer-events-none" />
+
+                            {/* swipe hint mobile */}
+                            <div
+                              className="
+      absolute
+      bottom-4
+      right-4
+      z-20
+      flex
+      items-center
+      gap-2
+      px-3
+      py-2
+      rounded-full
+      bg-black/40
+      backdrop-blur-md
+      text-white/80
+      text-xs
+      md:hidden
+      animate-pulse
+    "
+                            >
+                              <MoveHorizontal size={14} />
+                              <span>Swipe</span>
+                            </div>
+                          </div>
                         ) : (
                           <div
                             className="
