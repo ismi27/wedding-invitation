@@ -1161,20 +1161,21 @@ p-6 md:p-8
                           <Swiper
                             modules={[Autoplay]}
                             spaceBetween={16}
-                            slidesPerView={1.2}
+                            slidesPerView={1}
+                            centeredSlides={true}
                             loop={true}
-                            speed={7000}
+                            speed={6000}
                             autoplay={{
-                              delay: 0,
+                              delay: 2500,
                               disableOnInteraction: false,
+                              pauseOnMouseEnter: false,
                             }}
-                            allowTouchMove={true}
                             breakpoints={{
                               768: {
                                 slidesPerView: 2.2,
                               },
                             }}
-                            className="w-full"
+                            className="w-full overflow-hidden"
                           >
                             {item.images.map((img, imgIndex) => (
                               <SwiperSlide key={imgIndex}>
@@ -1182,6 +1183,7 @@ p-6 md:p-8
                                   className="
           relative
           h-[420px]
+          md:h-[500px]
           overflow-hidden
           rounded-2xl
         "
