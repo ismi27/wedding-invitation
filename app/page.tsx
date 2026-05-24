@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import { Swiper, SwiperSlide } from "swiper/react";
 import { MoveHorizontal } from "lucide-react";
-import { Autoplay } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
+import "swiper/css/pagination";
 import "swiper/css";
 import Image from "next/image"
 import {
@@ -1161,7 +1162,7 @@ p-6 md:p-8
                         {item.images ? (
                           <div className="relative">
                             <Swiper
-                              modules={[Autoplay]}
+                              modules={[Autoplay, Pagination]}
                               spaceBetween={16}
                               slidesPerView={1}
                               centeredSlides={true}
@@ -1171,6 +1172,9 @@ p-6 md:p-8
                                 delay: 2500,
                                 disableOnInteraction: false,
                                 pauseOnMouseEnter: false,
+                              }}
+                              pagination={{
+                                clickable: true,
                               }}
                               breakpoints={{
                                 768: {
@@ -1212,29 +1216,23 @@ p-6 md:p-8
                             {/* gradient kanan */}
                             <div className="absolute top-0 right-0 h-full w-10 bg-gradient-to-l from-[#3b214f] to-transparent z-10 pointer-events-none" />
 
-                            {/* swipe hint mobile */}
+                            {/* hint swipe */}
                             <div
                               className="
-      absolute
-      bottom-4
-      right-4
-      z-20
+      md:hidden
       flex
       items-center
+      justify-center
       gap-2
-      px-3
-      py-2
-      rounded-full
-      bg-black/40
-      backdrop-blur-md
-      text-white/80
-      text-xs
-      md:hidden
+      mt-4
+      text-pink-200/80
+      text-sm
+      font-mono
       animate-pulse
     "
                             >
-                              <MoveHorizontal size={14} />
-                              <span>Swipe</span>
+                              <MoveHorizontal size={16} />
+                              <span>Geser foto</span>
                             </div>
                           </div>
                         ) : (
