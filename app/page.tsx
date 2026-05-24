@@ -1161,17 +1161,17 @@ p-6 md:p-8
 "                      >
                         {item.images ? (
                           <div className="relative">
+
                             <Swiper
                               modules={[Autoplay, Pagination]}
-                              spaceBetween={16}
-                              slidesPerView={1}
-                              centeredSlides={true}
+                              spaceBetween={14}
+                              slidesPerView={1.15}
+                              centeredSlides={false}
                               loop={true}
-                              speed={6000}
+                              speed={800}
                               autoplay={{
                                 delay: 2500,
                                 disableOnInteraction: false,
-                                pauseOnMouseEnter: false,
                               }}
                               pagination={{
                                 clickable: true,
@@ -1181,7 +1181,7 @@ p-6 md:p-8
                                   slidesPerView: 2.2,
                                 },
                               }}
-                              className="w-full overflow-hidden"
+                              className="w-full"
                             >
                               {item.images.map((img, imgIndex) => (
                                 <SwiperSlide key={imgIndex}>
@@ -1210,30 +1210,37 @@ p-6 md:p-8
                               ))}
                             </Swiper>
 
-                            {/* gradient kiri */}
-                            <div className="absolute top-0 left-0 h-full w-10 bg-gradient-to-r from-[#3b214f] to-transparent z-10 pointer-events-none" />
-
-                            {/* gradient kanan */}
-                            <div className="absolute top-0 right-0 h-full w-10 bg-gradient-to-l from-[#3b214f] to-transparent z-10 pointer-events-none" />
-
-                            {/* hint swipe */}
+                            {/* swipe hint */}
                             <div
                               className="
       md:hidden
-      flex
-      items-center
-      justify-center
-      gap-2
-      mt-4
-      text-pink-200/80
-      text-sm
+      absolute
+      bottom-5
+      left-1/2
+      -translate-x-1/2
+      z-20
+
+      flex items-center gap-2
+
+      px-4 py-2
+
+      rounded-full
+
+      bg-black/30
+      backdrop-blur-md
+
+      text-pink-100
+      text-xs
       font-mono
+
+      pointer-events-none
       animate-pulse
     "
                             >
-                              <MoveHorizontal size={16} />
-                              <span>Geser foto</span>
+                              <MoveHorizontal size={14} />
+                              Geser
                             </div>
+
                           </div>
                         ) : (
                           <div
