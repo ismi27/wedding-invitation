@@ -3,6 +3,9 @@
 import FallingPetals from "@/components/FallingPetals"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay } from "swiper/modules";
+import "swiper/css";
 import Image from "next/image"
 import {
   CalendarDays,
@@ -23,11 +26,11 @@ export default function WeddingInvitation() {
     alert("✨ Berhasil disalin")
   }
   const handleImageLoad = (key: string) => {
-  setImagesLoaded((prev) => ({
-    ...prev,
-    [key]: true,
-  }))
-}
+    setImagesLoaded((prev) => ({
+      ...prev,
+      [key]: true,
+    }))
+  }
   const [opened, setOpened] = useState(false)
   const [guestName, setGuestName] = useState("")
   const weddingDate = new Date("2026-06-28T09:00:00")
@@ -42,8 +45,8 @@ export default function WeddingInvitation() {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [imagesLoaded, setImagesLoaded] = useState<
-  Record<string, boolean>
->({})
+    Record<string, boolean>
+  >({})
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   const [timeLeft, setTimeLeft] = useState({
@@ -460,10 +463,10 @@ export default function WeddingInvitation() {
 
                   <div className="relative">
 
-  {/* LOADER */}
-  {!imagesLoaded["prewed"] && (
-    <div
-      className="
+                    {/* LOADER */}
+                    {!imagesLoaded["prewed"] && (
+                      <div
+                        className="
         absolute inset-0
         animate-pulse
         bg-pink-200/10
@@ -471,16 +474,16 @@ export default function WeddingInvitation() {
         rounded-t-[80px] md:rounded-t-[120px]
         rounded-b-[20px]
       "
-    />
-  )}
+                      />
+                    )}
 
-  <Image
-    src="/images/fotoberdua4.jpg"
-    alt="Prewedding"
-    width={900}
-    height={1200}
-    onLoad={() => handleImageLoad("prewed")}
-    className={`
+                    <Image
+                      src="/images/fotoberdua4.jpg"
+                      alt="Prewedding"
+                      width={900}
+                      height={1200}
+                      onLoad={() => handleImageLoad("prewed")}
+                      className={`
       w-full
       h-auto
       object-contain
@@ -490,14 +493,13 @@ export default function WeddingInvitation() {
       rounded-t-[80px] md:rounded-t-[120px]
       rounded-b-[20px]
 
-      ${
-        imagesLoaded["prewed"]
-          ? "opacity-100"
-          : "opacity-0"
-      }
+      ${imagesLoaded["prewed"]
+                          ? "opacity-100"
+                          : "opacity-0"
+                        }
     `}
-  />
-</div>
+                    />
+                  </div>
 
                 </div>
               </section>
@@ -718,24 +720,23 @@ bg-white/5
 
   ml-2 md:ml-4
 ">          {!imagesLoaded["akad"] && (
-    <div className="absolute inset-0 rounded-full bg-pink-200/10 animate-pulse" />
-  )}
+                              <div className="absolute inset-0 rounded-full bg-pink-200/10 animate-pulse" />
+                            )}
 
-  <Image
-    src="/images/icons/akad4.png"
-    alt="Akad"
-    fill
-    onLoad={() => handleImageLoad("akad")}
-    className={`
+                            <Image
+                              src="/images/icons/akad4.png"
+                              alt="Akad"
+                              fill
+                              onLoad={() => handleImageLoad("akad")}
+                              className={`
       object-contain
       transition-opacity duration-500
-      ${
-        imagesLoaded["akad"]
-          ? "opacity-100"
-          : "opacity-0"
-      }
+      ${imagesLoaded["akad"]
+                                  ? "opacity-100"
+                                  : "opacity-0"
+                                }
     `}
-  />
+                            />
                           </div>
 
                           {/* TITLE + INFO */}
@@ -836,8 +837,8 @@ bg-white/5
                     </div>
 
                     {/* RESEPSI */}
-<div
-  className="
+                    <div
+                      className="
     relative overflow-hidden
 
     rounded-[32px]
@@ -852,119 +853,119 @@ bg-white/5
 
     shadow-[0_0_35px_rgba(255,105,180,0.08)]
   "
->
+                    >
 
- {/* SPARKLES */}
-<div
-  className="absolute top-6 left-10 text-pink-200/70 text-xl z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 2.5s ease-in-out infinite",
-  }}
->
-  ✦
-</div>
+                      {/* SPARKLES */}
+                      <div
+                        className="absolute top-6 left-10 text-pink-200/70 text-xl z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 2.5s ease-in-out infinite",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-<div
-  className="absolute top-10 right-16 text-pink-100/70 text-lg z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 3s ease-in-out infinite",
-    animationDelay: "1s",
-  }}
->
-  ✦
-</div>
+                      <div
+                        className="absolute top-10 right-16 text-pink-100/70 text-lg z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 3s ease-in-out infinite",
+                          animationDelay: "1s",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-<div
-  className="absolute top-1/2 left-6 text-pink-300/70 text-sm z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 2.8s ease-in-out infinite",
-    animationDelay: "2s",
-  }}
->
-  ✦
-</div>
+                      <div
+                        className="absolute top-1/2 left-6 text-pink-300/70 text-sm z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 2.8s ease-in-out infinite",
+                          animationDelay: "2s",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-<div
-  className="absolute bottom-10 left-1/4 text-pink-200/60 text-lg z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 3.2s ease-in-out infinite",
-    animationDelay: "1.5s",
-  }}
->
-  ✦
-</div>
+                      <div
+                        className="absolute bottom-10 left-1/4 text-pink-200/60 text-lg z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 3.2s ease-in-out infinite",
+                          animationDelay: "1.5s",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-<div
-  className="absolute bottom-6 right-10 text-pink-100/60 text-xl z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 2.2s ease-in-out infinite",
-    animationDelay: "2.3s",
-  }}
->
-  ✦
-</div>
+                      <div
+                        className="absolute bottom-6 right-10 text-pink-100/60 text-xl z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 2.2s ease-in-out infinite",
+                          animationDelay: "2.3s",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-<div
-  className="absolute top-1/3 right-1/3 text-pink-300/50 text-sm z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 3.5s ease-in-out infinite",
-    animationDelay: "1.8s",
-  }}
->
-  ✦
-</div>
+                      <div
+                        className="absolute top-1/3 right-1/3 text-pink-300/50 text-sm z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 3.5s ease-in-out infinite",
+                          animationDelay: "1.8s",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-<div
-  className="absolute bottom-1/3 right-20 text-pink-200/70 text-base z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 2.7s ease-in-out infinite",
-    animationDelay: "0.8s",
-  }}
->
-  ✦
-</div>
+                      <div
+                        className="absolute bottom-1/3 right-20 text-pink-200/70 text-base z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 2.7s ease-in-out infinite",
+                          animationDelay: "0.8s",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-<div
-  className="absolute top-20 left-1/2 text-pink-100/60 text-xs z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 4s ease-in-out infinite",
-    animationDelay: "2.7s",
-  }}
->
-  ✦
-</div>
+                      <div
+                        className="absolute top-20 left-1/2 text-pink-100/60 text-xs z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 4s ease-in-out infinite",
+                          animationDelay: "2.7s",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-<div
-  className="absolute bottom-16 left-12 text-pink-200/50 text-sm z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 3.8s ease-in-out infinite",
-    animationDelay: "1.1s",
-  }}
->
-  ✦
-</div>
+                      <div
+                        className="absolute bottom-16 left-12 text-pink-200/50 text-sm z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 3.8s ease-in-out infinite",
+                          animationDelay: "1.1s",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-<div
-  className="absolute top-14 right-1/3 text-pink-100/40 text-xs z-20 pointer-events-none"
-  style={{
-    animation: "twinkle 2.9s ease-in-out infinite",
-    animationDelay: "0.5s",
-  }}
->
-  ✦
-</div>
+                      <div
+                        className="absolute top-14 right-1/3 text-pink-100/40 text-xs z-20 pointer-events-none"
+                        style={{
+                          animation: "twinkle 2.9s ease-in-out infinite",
+                          animationDelay: "0.5s",
+                        }}
+                      >
+                        ✦
+                      </div>
 
-  {/* CONTENT */}
-  <div className="flex flex-col gap-6">
+                      {/* CONTENT */}
+                      <div className="flex flex-col gap-6">
 
-    {/* TOP */}
-    <div className="flex items-center gap-7 md:gap-10 px-2 md:px-4">
+                        {/* TOP */}
+                        <div className="flex items-center gap-7 md:gap-10 px-2 md:px-4">
 
-      {/* TEXT */}
-      <div className="flex-1 pr-2">
+                          {/* TEXT */}
+                          <div className="flex-1 pr-2">
 
-        <h2
-          className="
+                            <h2
+                              className="
             text-2xl
             md:text-4xl
 
@@ -973,12 +974,12 @@ bg-white/5
 
             mb-5
           "
-        >
-          Resepsi
-        </h2>
+                            >
+                              Resepsi
+                            </h2>
 
-        <div
-          className="
+                            <div
+                              className="
             space-y-4
 
             text-pink-100/90
@@ -986,28 +987,28 @@ bg-white/5
             text-base
             md:text-xl
           "
-        >
+                            >
 
-          <p className="flex items-start gap-3">
-            <CalendarDays
-              size={18}
-              className="text-pink-300 mt-1 flex-shrink-0"
-            />
-            Minggu, 28 Juni 2026
-          </p>
+                              <p className="flex items-start gap-3">
+                                <CalendarDays
+                                  size={18}
+                                  className="text-pink-300 mt-1 flex-shrink-0"
+                                />
+                                Minggu, 28 Juni 2026
+                              </p>
 
-          <p className="flex items-start gap-3">
-            <span className="mt-1">🕘</span>
-            11.00 WIB - selesai
-          </p>
+                              <p className="flex items-start gap-3">
+                                <span className="mt-1">🕘</span>
+                                11.00 WIB - selesai
+                              </p>
 
-        </div>
+                            </div>
 
-      </div>
+                          </div>
 
-      {/* ICON */}
-      <div
-        className="
+                          {/* ICON */}
+                          <div
+                            className="
           relative
 
           w-[95px] h-[95px]
@@ -1017,20 +1018,20 @@ bg-white/5
 
           mr-2 md:mr-4
         "
-      >
-        <Image
-          src="/images/icons/resepsi4.png"
-          alt="Resepsi"
-          fill
-          className="object-contain"
-        />
-      </div>
+                          >
+                            <Image
+                              src="/images/icons/resepsi4.png"
+                              alt="Resepsi"
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
 
-    </div>
+                        </div>
 
-    {/* ADDRESS */}
-    <div
-      className="
+                        {/* ADDRESS */}
+                        <div
+                          className="
         text-pink-100/90
 
         text-base
@@ -1040,23 +1041,23 @@ bg-white/5
 
         px-2 md:px-4
       "
-    >
-      <p>
-        Jl. Pabrik Kulit No.101,
-        RT.16/RW.4,
-        Cakung Bar.,
-        Kec. Cakung,
-        Kota Jakarta Timur,
-        Daerah Khusus Ibukota Jakarta 13910
-      </p>
-    </div>
+                        >
+                          <p>
+                            Jl. Pabrik Kulit No.101,
+                            RT.16/RW.4,
+                            Cakung Bar.,
+                            Kec. Cakung,
+                            Kota Jakarta Timur,
+                            Daerah Khusus Ibukota Jakarta 13910
+                          </p>
+                        </div>
 
-    {/* BUTTON */}
-    <div className="px-2 md:px-4">
-      <a
-        href="https://maps.app.goo.gl/3bKrRfVPNDVDbZcm7"
-        target="_blank"
-        className="
+                        {/* BUTTON */}
+                        <div className="px-2 md:px-4">
+                          <a
+                            href="https://maps.app.goo.gl/3bKrRfVPNDVDbZcm7"
+                            target="_blank"
+                            className="
           inline-flex items-center gap-2
 
           px-7 py-4
@@ -1075,14 +1076,14 @@ bg-white/5
 
           transition-all
         "
-      >
-        <MapPin size={18} />
-        Lihat Lokasi
-      </a>
-    </div>
+                          >
+                            <MapPin size={18} />
+                            Lihat Lokasi
+                          </a>
+                        </div>
 
-  </div>
-</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -1156,41 +1157,72 @@ backdrop-blur-xl
 rounded-[28px]
 p-6 md:p-8
 "                      >
-                        <div
-                          className={`
-    grid gap-4
-    ${item.images ? "grid-cols-2 md:grid-cols-3" : "grid-cols-1"}
-  `}
-                        >
-                          {(item.images || [item.image]).map((img, imgIndex) => (
-                            <div
-                              key={imgIndex}
-                              className="
-        relative
-        h-[320px]
-        md:h-[420px]
-        overflow-hidden
-        rounded-2xl
-      "
-                            >
-                              <Image
-                                src={img}
-                                alt={item.title}
-                                fill
-                                className={`
-  object-cover
-  hover:scale-105
-  transition
-  duration-700
-  ${item.title === "marriage_release_v1.0.0"
-                                    ? "object-[center_68%]"
-                                    : "object-center"
-                                  }
-`}
-                              />
-                            </div>
-                          ))}
-                        </div>
+                        {item.images ? (
+                          <Swiper
+                            modules={[Autoplay]}
+                            spaceBetween={16}
+                            slidesPerView={1.2}
+                            loop={true}
+                            speed={7000}
+                            autoplay={{
+                              delay: 0,
+                              disableOnInteraction: false,
+                            }}
+                            allowTouchMove={true}
+                            breakpoints={{
+                              768: {
+                                slidesPerView: 2.2,
+                              },
+                            }}
+                            className="w-full"
+                          >
+                            {item.images.map((img, imgIndex) => (
+                              <SwiperSlide key={imgIndex}>
+                                <div
+                                  className="
+          relative
+          h-[420px]
+          overflow-hidden
+          rounded-2xl
+        "
+                                >
+                                  <Image
+                                    src={img}
+                                    alt={item.title}
+                                    fill
+                                    className="object-cover"
+                                  />
+                                </div>
+                              </SwiperSlide>
+                            ))}
+                          </Swiper>
+                        ) : (
+                          <div
+                            className="
+      relative
+      h-[320px]
+      md:h-[420px]
+      overflow-hidden
+      rounded-2xl
+    "
+                          >
+                            <Image
+                              src={item.image}
+                              alt={item.title}
+                              fill
+                              className={`
+        object-cover
+        hover:scale-105
+        transition
+        duration-700
+        ${item.title === "marriage_release_v1.0.0"
+                                  ? "object-[center_68%]"
+                                  : "object-center"
+                                }
+      `}
+                            />
+                          </div>
+                        )}
 
                         <div className="p-6 md:p-6 md:p-6 md:p-6 md:p-5 md:p-8 flex flex-col justify-center">
                           <p className="text-pink-200 font-mono">
@@ -1315,8 +1347,8 @@ p-6 md:p-8
               {/* FOOTER */}
               <footer className="pb-16 px-6">
                 <div className="text-center text-gray-500 text-sm">
-                                    <p
-                                      className="
+                  <p
+                    className="
     text-2xl
     md:text-3xl
 
@@ -1330,9 +1362,9 @@ p-6 md:p-8
 
     drop-shadow-[0_0_14px_rgba(255,192,203,0.3)]
   "
-                                    >
-                                      Thank you for being part of our story.
-                                    </p>
+                  >
+                    Thank you for being part of our story.
+                  </p>
                   <div className="mt-2 font-mono text-pink-200">
                     <p
                       className="
@@ -1688,8 +1720,8 @@ lg:grid-cols-2
 
                     {/* FOOTER */}
                     <div className="mt-14 text-center relative z-10">
-                       <p
-                                              className="
+                      <p
+                        className="
     text-xl
     md:text-3xl
 
@@ -1703,9 +1735,9 @@ lg:grid-cols-2
 
     drop-shadow-[0_0_16px_rgba(255,192,203,0.35)]
   "
-                                            >
-                                              ✨ Every blessing means the world to us ✨
-                                            </p>
+                      >
+                        ✨ Every blessing means the world to us ✨
+                      </p>
                     </div>
                   </div>
                   <p
