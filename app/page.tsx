@@ -499,7 +499,7 @@ duration-300
                     )}
 
                     <Image
-                      src="/images/fotoberdua2.jpg"
+                      src="/images/fotoberdua6.jpg"
                       alt="Prewedding"
                       width={900}
                       height={1200}
@@ -1168,7 +1168,7 @@ bg-white/5
                       {
                         year: "Juni 2026",
                         title: "marriage_release_v1.0.0",
-                        image: "/images/fotoberdua4.JPG",
+                        image: "/images/fotoberdua5.JPG",
                         desc: "Siap menapaki perjalanan baru bersama. Tak terasa, segala riuh dan rumitnya persiapan ini telah membawa kami sampai di gerbang pernikahan.",
                       },
                     ].map((item, index) => (
