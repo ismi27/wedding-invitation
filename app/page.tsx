@@ -1734,9 +1734,9 @@ lg:grid-cols-2
                           >
 
                             <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
-                              Jl. Melati Indah No. 10
+                              Jl. Cakung Cilincing Barat No.22, RT 004 RW 016 Kel. Cakung Barat Kec. Cakung
                               <br />
-                              Bandung, Jawa Barat
+                              Jakarta Timur 13910
                             </p>
 
                             <a
