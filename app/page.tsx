@@ -1499,7 +1499,7 @@ p-6 md:p-8
                       </p>
 
                       <h2 className="mt-4 text-lg md:text-2xl sm:text-3xl md:text-5xl font-light text-white">
-                        ✨ Send Your Blessing
+                        ✨ Send Your Blessing ✨
                       </h2>
 
                       {/* <p className="mt-6 text-sm md:text-base text-[#FFF8F0]/70 leading-relaxed px-2 max-w-2xl mx-auto">
@@ -1734,7 +1734,7 @@ lg:grid-cols-2
                           >
 
                             <p className="mt-4 text-sm md:text-base text-white leading-relaxed">
-                              Jl. Cakung Cilincing Barat No.22, RT 004 RW 016 Kel. Cakung Barat Kec. Cakung
+                              Jl. Cakung Cilincing Barat No.22, RT 016 RW 004 Kel. Cakung Barat Kec. Cakung
                               <br />
                               Jakarta Timur 13910
                             </p>
@@ -1762,7 +1762,7 @@ lg:grid-cols-2
                             <button
                               onClick={() =>
                                 copyToClipboard(
-                                  "Jl. Cakung Cilincing Barat No.22, RT 004 RW 016 Kel. Cakung Barat Kec. Cakung Jakarta Timur 13910"
+                                  "Jl. Cakung Cilincing Barat No.22, RT 016 RW 004 Kel. Cakung Barat Kec. Cakung Jakarta Timur 13910"
                                 )
                               }
                               className="
