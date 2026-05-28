@@ -499,7 +499,7 @@ duration-300
                     )}
 
                     <Image
-                      src="/images/fotoberdua6.JPG"
+                      src="/images/fotoberdua6.jpg"
                       alt="Prewedding"
                       width={900}
                       height={1200}
