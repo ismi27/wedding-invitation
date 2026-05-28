@@ -185,13 +185,13 @@ export default function WeddingInvitation() {
       {!isValidGuest ? (
         <div className="min-h-[100svh] bg-[#140F22] text-white flex items-center justify-center text-center px-6">
           <div className="max-w-md">
-            <h1 className="text-3xl md:text-4xl font-semibold text-pink-100">
+            <h1 className="text-3xl md:text-4xl font-semibold text-[#FFF8F0]">
               Undangan Tidak Valid
             </h1>
 
-            <p className="mt-4 text-pink-100/70 leading-relaxed">
+            <p className="mt-4 text-[#FFF8F0]/70 leading-relaxed">
               Mohon gunakan link undangan resmi
-              yang telah diberikan kepada Anda.
+              yang telah diberikan kepada Bapak/Ibu/Saudara/i.
             </p>
           </div>
         </div>
@@ -215,7 +215,7 @@ export default function WeddingInvitation() {
       bg-cover bg-center bg-no-repeat
     "
                   style={{
-                    backgroundImage: "url('/images/gate-bg.png')",
+                    backgroundImage: "url('/images/gate-bg2.png')",
                   }}
                 />
 
@@ -227,21 +227,21 @@ export default function WeddingInvitation() {
       bg-cover bg-center bg-no-repeat
     "
                   style={{
-                    backgroundImage: "url('/images/mobile-gate-bg.png')",
+                    backgroundImage: "url('/images/mobile-gate-bg2.png')",
                   }}
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-[#12051f]/60" />
+                <div className="absolute inset-0 bg-[#1A1721]/52" />
               </div>
 
               {/* DARK OVERLAY */}
-              <div className="absolute inset-0 bg-[#140F22]/55" />
+              <div className="absolute inset-0 bg-[#221B1A]/38" />
 
               {/* PINK GLOW */}
-              <div className="absolute left-[-120px] top-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-pink-400/20 blur-[120px] rounded-full" />
+              <div className="absolute left-[-120px] top-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-[#E6D5C8]/16 blur-[120px] rounded-full" />
 
-              <div className="absolute right-[-120px] bottom-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-fuchsia-400/20 blur-[120px] rounded-full" />
+              <div className="absolute right-[-120px] bottom-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-[#7B5A67]/12 blur-[120px] rounded-full" />
 
               {/* CONTENT */}
               <motion.div
@@ -250,28 +250,28 @@ export default function WeddingInvitation() {
                 transition={{ duration: 1 }}
                 className="relative z-10 text-center max-w-2xl"
               >
-                <p className="text-pink-200 font-mono mb-4 tracking-widest">
+                <p className="text-[#E7C7D1] font-mono mb-4 tracking-widest">
             // marriage release v1.0.0
                 </p>
 
                 <div className="mb-6">
-                  <p className="text-pink-100 italic text-xl md:text-2xl md:text-3xl md:text-4xl font-light tracking-wide">
+                  <p className="text-[#FFF8F0] italic text-xl md:text-2xl md:text-3xl md:text-4xl font-light tracking-wide">
                     The Wedding Of
                   </p>
 
                   {/* ORNAMENT */}
                   <div className="flex items-center justify-center gap-4 mt-3">
-                    <div className="w-20 h-[1px] bg-gradient-to-r from-transparent to-pink-200/70" />
+                    <div className="w-20 h-[1px] bg-gradient-to-r from-transparent to-[#E6D5C8]/70" />
 
-                    <div className="text-pink-200 text-xl">
+                    <div className="text-[#D8C2C7] text-xl">
                       ✦
                     </div>
 
-                    <div className="w-20 h-[1px] bg-gradient-to-l from-transparent to-pink-200/70" />
+                    <div className="w-20 h-[1px] bg-gradient-to-l from-transparent to-[#E6D5C8]/70" />
                   </div>
                 </div>
 
-                <h1 className="text-3xl md:text-4xl sm:text-5xl md:text-8xl font-light leading-tight text-pink-100 drop-shadow-[0_0_20px_rgba(255,192,203,0.45)]">
+                <h1 className="text-3xl md:text-4xl sm:text-5xl md:text-8xl font-light leading-tight text-[#FFF8F0] drop-shadow-[0_0_24px_rgba(120,82,96,0.22)]">
 
 
                   Abdul Haris
@@ -279,8 +279,7 @@ export default function WeddingInvitation() {
                   <div className="flex justify-center my-6">
                     <Heart
                       size={28}
-                      className="text-pink-200"
-                      fill="currentColor"
+                      className="text-[#E6C9D2]" fill="currentColor"
                     />
                   </div>
 
@@ -289,19 +288,19 @@ export default function WeddingInvitation() {
 
                 <div className="mt-10 space-y-3">
 
-                  <p className="text-pink-100/80 tracking-[0.25em] uppercase text-sm">
+                  <p className="text-[#F3E5DA]/75 tracking-[0.25em] uppercase text-sm">
                     Kepada Yth.
                   </p>
 
-                  <div className="inline-block px-8 py-4 rounded-2xl bg-white/10 border border-pink-200/20 backdrop-blur-xl shadow-lg shadow-pink-500/10">
+                  <div className="inline-block px-8 py-4 rounded-2xl bg-[#F5E8DC]/8 border border-[#E6D5C8]/20 backdrop-blur-xl shadow-lg shadow-[#CDA27E]/10">
                     <p className="text-xl md:text-2xl md:text-3xl font-semibold text-white">
                       {guestName}
                     </p>
                   </div>
 
-                  <p className="text-pink-100/80 text-lg leading-relaxed max-w-lg mx-auto">
-                    Dengan penuh kebahagiaan,
-                    kami mengundang Anda untuk hadir
+                  <p className="text-[#F3E5DA]/75 text-lg leading-relaxed max-w-lg mx-auto">
+                    Bismillah, dengan penuh kebahagiaan,
+                    kami mengundang Bapak/Ibu/Saudara/i untuk hadir
                     dalam hari istimewa kami.
                   </p>
 
@@ -323,7 +322,29 @@ export default function WeddingInvitation() {
                         })
                     }
                   }}
-                  className="mt-10 bg-gradient-to-r from-pink-200 to-fuchsia-200 text-[#1B1527] px-7 py-3 md:px-10 md:py-4 rounded-2xl font-semibold hover:scale-105 transition-all duration-300 shadow-2xl shadow-pink-300/40"            >
+                  className="
+mt-10
+
+bg-[#E8C7D0]
+
+text-[#2A1E24]
+
+px-7 py-3
+md:px-10 md:py-4
+
+rounded-2xl
+
+font-semibold
+
+shadow-xl
+shadow-[#E8C7D0]/25
+
+hover:bg-[#EFD5DC]
+hover:scale-105
+
+transition-all
+duration-300
+"            >
                   Buka Undangan
                 </button>
               </motion.div>
@@ -343,7 +364,7 @@ export default function WeddingInvitation() {
       bg-cover bg-center bg-no-repeat
     "
                   style={{
-                    backgroundImage: "url('/images/fantasy-bg.png')",
+                    backgroundImage: "url('/images/fantasy-bg2.png')",
                     backgroundAttachment: "fixed",
                   }}
                 />
@@ -356,36 +377,35 @@ export default function WeddingInvitation() {
       bg-cover bg-top bg-no-repeat
     "
                   style={{
-                    backgroundImage: "url('/images/mobile-fantasy-bg.png')",
+                    backgroundImage: "url('/images/mobile-fantasy-bg2.png')",
                   }}
                 />
 
                 {/* DARK OVERLAY */}
-                <div className="absolute inset-0 bg-[#140F22]/70" />
-
+                <div className="absolute inset-0 bg-[#201A1C]/45" />
                 {/* GLOW EFFECT */}
-                <div className="absolute left-[-200px] top-[10%] w-[500px] h-[500px] bg-pink-400/20 blur-[140px] rounded-full" />
+                <div className="absolute left-[-200px] top-[10%] w-[500px] h-[500px] bg-[#E8DCD2]/10 blur-[140px] rounded-full" />
 
-                <div className="absolute right-[-200px] bottom-[10%] w-[500px] h-[500px] bg-fuchsia-400/20 blur-[140px] rounded-full" />
+                <div className="absolute right-[-200px] bottom-[10%] w-[500px] h-[500px] bg-[#E8DCD2]/10 blur-[140px] rounded-full" />
               </div>
-              <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-pink-300/20 blur-[140px] rounded-full" />
+              <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#E8DCD2]/10 blur-[140px] rounded-full" />
 
-              <div className="absolute bottom-0 right-0 w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-fuchsia-300/20 blur-[120px] rounded-full" />
+              <div className="absolute bottom-0 right-0 w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-[#7C5A66]/10 blur-[120px] rounded-full" />
               {/* HERO */}
               <motion.section
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1 }}
                 className="relative min-h-[100svh] flex flex-col items-center justify-center text-center px-6 overflow-hidden"          >
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#F9A8D4,transparent_40%)] opacity-30" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#E9D8D2,transparent_40%)] opacity-30" />
                 {/* LEFT GLOW */}
-                <div className="absolute left-[-100px] top-[20%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-pink-400/20 blur-[120px] rounded-full" />
+                <div className="absolute left-[-100px] top-[20%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-[#E8DCD2]/10 blur-[120px] rounded-full" />
 
                 {/* RIGHT GLOW */}
-                <div className="absolute right-[-100px] bottom-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-fuchsia-400/20 blur-[120px] rounded-full" />
+                <div className="absolute right-[-100px] bottom-[10%] w-[220px] h-[220px] md:w-[400px] md:h-[400px] bg-[#E8DCD2]/10 blur-[120px] rounded-full" />
 
 
-                <div className="absolute top-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-8 left-8 flex items-center justify-center gap-2 text-pink-200 font-mono text-sm z-20">
+                <div className="absolute top-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-8 left-8 flex items-center justify-center gap-2 text-[#E7C7D1] font-mono text-sm z-20">
                   <span>👑</span>
                   <span>// marriage.release v1.0.0</span>
                 </div>
@@ -395,51 +415,50 @@ export default function WeddingInvitation() {
                   <div className="flex justify-center my-6">
                     <Heart
                       size={28}
-                      className="text-pink-200"
-                      fill="currentColor"
+                      className="text-[#E6C9D2]" fill="currentColor"
                     />
                   </div>
                   Ismi Rizki Sopiyanti
                 </h1>
 
-                <p className="mt-8 text-gray-400 max-w-xl leading-relaxed z-10">
+                <p className="mt-8 text-[#D7DEDC] max-w-xl leading-relaxed z-10">
                   Setelah perjalanan panjang yang penuh cerita,
                   kami siap memulai perjalanan baru bersama.
                 </p>
 
                 <div className="grid grid-cols-4 gap-4 mt-12 z-10">
-                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-2xl p-4">
+                  <div className="bg-white/10 border border-[#E7D7CF]/15 backdrop-blur-xl rounded-2xl p-4">
                     <p className="text-xl md:text-2xl md:text-3xl font-light">
                       {timeLeft.days}
                     </p>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-sm text-[#D7DEDC] mt-1">
                       Hari
                     </p>
                   </div>
 
-                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-2xl p-4">
+                  <div className="bg-white/10 border border-[#E7D7CF]/15 backdrop-blur-xl rounded-2xl p-4">
                     <p className="text-xl md:text-2xl md:text-3xl font-light">
                       {timeLeft.hours}
                     </p>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-sm text-[#D7DEDC] mt-1">
                       Jam
                     </p>
                   </div>
 
-                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-2xl p-4">
+                  <div className="bg-white/10 border border-[#E7D7CF]/15 backdrop-blur-xl rounded-2xl p-4">
                     <p className="text-2xl md:text-3xl font-light">
                       {timeLeft.minutes}
                     </p>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-sm text-[#D7DEDC] mt-1">
                       Menit
                     </p>
                   </div>
 
-                  <div className="bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-2xl p-4">
+                  <div className="bg-white/10 border border-[#E7D7CF]/15 backdrop-blur-xl rounded-2xl p-4">
                     <p className="text-2xl md:text-3xl font-light">
                       {timeLeft.seconds}
                     </p>
-                    <p className="text-sm text-gray-400 mt-1">
+                    <p className="text-sm text-[#D7DEDC] mt-1">
                       Detik
                     </p>
                   </div>
@@ -455,7 +474,7 @@ export default function WeddingInvitation() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 1 }}
-                  className="mt-10 flex items-center gap-3 text-gray-300 z-10"
+                  className="mt-10 flex items-center gap-3 text-[#D7DEDC] z-10"
                 >
                   {/* <span> Tanggal Resepsi: 28 Juni 2026</span> */}
                 </motion.div>
@@ -471,7 +490,7 @@ export default function WeddingInvitation() {
                         className="
         absolute inset-0
         animate-pulse
-        bg-pink-200/10
+        bg-[#E8C7D0]/10
         backdrop-blur-sm
         rounded-t-[80px] md:rounded-t-[120px]
         rounded-b-[20px]
@@ -480,7 +499,7 @@ export default function WeddingInvitation() {
                     )}
 
                     <Image
-                      src="/images/fotoberdua4.jpg"
+                      src="/images/fotoberdua2.jpg"
                       alt="Prewedding"
                       width={900}
                       height={1200}
@@ -506,18 +525,26 @@ export default function WeddingInvitation() {
                 </div>
               </section>
               <section className="px-6 py-14 md:py-20">
-                <div className="max-w-5xl mx-auto text-center border border-pink-200/20 bg-white/5 backdrop-blur-xl rounded-[28px] md:rounded-[40px] px-6 md:px-10 py-10 md:py-16 shadow-2xl shadow-pink-500/10 relative overflow-hidden">
-                  <p className="text-lg md:text-2xl leading-relaxed text-gray-300 font-light">
-                    “Dan di antara tanda-tanda (kebesaran)-Nya ialah
-                    Dia menciptakan pasangan-pasangan untukmu dari
-                    jenismu sendiri, agar kamu cenderung dan merasa
-                    tenteram kepadanya, dan Dia menjadikan di antaramu
-                    rasa kasih dan sayang.”
-                  </p>
+                <div className="max-w-5xl mx-auto text-center border border-[#E7D7CF]/15 bg-white/5 backdrop-blur-xl rounded-[28px] md:rounded-[40px] px-6 md:px-10 py-10 md:py-16 shadow-2xl shadow-[#CDA27E]/10 relative overflow-hidden">
+                  <div className="text-lg md:text-2xl leading-relaxed text-[#D7DEDC] font-light">
+
+                    <p className="text-[#D7B49E] text-xl md:text-2xl leading-loose font-arabic">
+                      وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُمْ مِنْ أَنْفُسِكُمْ أَزْوَاجًا
+                      لِتَسْكُنُوا إِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَوَدَّةً وَرَحْمَةً
+                    </p>
+
+                    <p className="mt-6 text-[#F5E7D8] text-sm md:text-lg leading-8 max-w-3xl mx-auto">
+                      “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia
+                      menciptakan pasangan-pasangan untukmu dari jenismu sendiri,
+                      agar kamu cenderung dan merasa tenteram kepadanya, dan Dia
+                      menjadikan di antaramu rasa kasih dan sayang.”
+                    </p>
+
+                  </div>
                   <div className="absolute top-0 left-0 w-40 h-40 bg-pink-300/10 blur-3xl rounded-t-[140px] rounded-b-[30px]" />
                   <div className="absolute bottom-0 right-0 w-40 h-40 bg-fuchsia-300/10 blur-3xl rounded-t-[140px] rounded-b-[30px]" />
 
-                  <p className="mt-8 text-pink-200 font-mono">
+                  <p className="mt-8 text-[#E7C7D1] font-mono">
                     Surah Ar-Ruum : 21
                   </p>
 
@@ -529,7 +556,7 @@ export default function WeddingInvitation() {
 
                   {/* Pengantin Pria */}
                   <div className="text-center">
-                    <div className="w-56 h-56 mx-auto rounded-t-[140px] rounded-b-[30px] border-pink-200/30 shadow-2xl shadow-pink-500/20 overflow-hidden border-4 border-white/10 relative">
+                    <div className="w-56 h-56 mx-auto rounded-t-[140px] rounded-b-[30px] border-pink-200/30 shadow-2xl shadow-[#CDA27E]/20 overflow-hidden border-4 border-white/10 relative">
                       <Image
                         src="/images/haris.jpg"
                         alt="Pengantin Pria"
@@ -538,15 +565,15 @@ export default function WeddingInvitation() {
                       />
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-light mt-8">
+                    <h2 className="text-xl md:text-4xl font-light mt-8">
                       Abdul Haris
                     </h2>
 
-                    <p className="mt-4 text-gray-400">
+                    <p className="mt-4 text-[#D7DEDC]">
                       Putra pertama dari keluarga
                     </p>
 
-                    <p className="text-xl mt-2">
+                    <p className="text-l mt-2">
                       Bpk. Lukmanil Hakim
                       <br />
                       & Ibu. Nurmawilis
@@ -560,9 +587,9 @@ export default function WeddingInvitation() {
     inline-flex
     items-center
     gap-2
-    text-pink-200
+    text-[#E7C7D1]
     font-mono
-    hover:text-pink-100
+    hover:text-[#FFF8F0]
     transition
   "
                     >
@@ -587,7 +614,7 @@ export default function WeddingInvitation() {
                   </div>
                   {/* Pengantin Wanita */}
                   <div className="text-center">
-                    <div className="w-44 h-44 md:w-56 md:h-56 mx-auto rounded-t-[140px] rounded-b-[30px] border-pink-200/30 shadow-2xl shadow-pink-500/20 overflow-hidden border-4 border-white/10 relative">
+                    <div className="w-44 h-44 md:w-56 md:h-56 mx-auto rounded-t-[140px] rounded-b-[30px] border-pink-200/30 shadow-2xl shadow-[#CDA27E]/20 overflow-hidden border-4 border-white/10 relative">
                       <Image
                         src="/images/ismi.jpg"
                         alt="Pengantin Wanita"
@@ -596,15 +623,15 @@ export default function WeddingInvitation() {
                       />
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-light mt-8">
+                    <h2 className="text-xl md:text-4xl font-light mt-8">
                       Ismi Rizki Sopiyanti
                     </h2>
 
-                    <p className="mt-4 text-gray-400">
+                    <p className="mt-4 text-[#D7DEDC]">
                       Putri pertama dari keluarga
                     </p>
 
-                    <p className="text-xl mt-2">
+                    <p className="text-l mt-2">
                       Bpk. Abdul Rozak
                       <br />
                       & Ibu. Sopikha
@@ -618,9 +645,9 @@ export default function WeddingInvitation() {
     inline-flex
     items-center
     gap-2
-    text-pink-200
+    text-[#E7C7D1]
     font-mono
-    hover:text-pink-100
+    hover:text-[#FFF8F0]
     transition
   "
                     >
@@ -649,7 +676,7 @@ export default function WeddingInvitation() {
               {/* QUOTE */}
               <section className="px-6 py-12">
                 <div className="max-w-4xl mx-auto border border-white/10 rounded-3xl p-6 md:p-6 md:p-6 md:p-6 md:p-6 md:p-10 bg-white/5 backdrop-blur-sm">
-                  <p className="text-center text-2xl md:text-3xl font-light leading-relaxed text-gray-100">
+                  <p className="text-center text-xl md:text-3xl font-light leading-relaxed text-gray-100">
                     “Two souls,
                     <br />
                     one future.”
@@ -664,7 +691,7 @@ export default function WeddingInvitation() {
     tracking-[0.3em]
     uppercase
 
-    text-pink-300
+    text-[#D8BEC8]
 text-center
     drop-shadow-[0_0_10px_rgba(255,192,203,0.45)]
   "
@@ -681,7 +708,7 @@ text-center
 
                   {/* TITLE */}
                   <div className="text-center mb-10">
-                    <p className="text-pink-200 font-mono tracking-[0.3em] text-sm md:text-base">
+                    <p className="text-[#E7C7D1] font-mono tracking-[0.3em] text-sm md:text-base">
                       ----✦ Save Our Date ✦----
                     </p>
                   </div>
@@ -695,7 +722,7 @@ text-center
 
     rounded-[32px]
 
-    border border-pink-200/20
+    border border-[#E7D7CF]/15
 
 bg-white/5
     backdrop-blur-xl
@@ -722,7 +749,7 @@ bg-white/5
 
   ml-2 md:ml-4
 ">          {!imagesLoaded["akad"] && (
-                              <div className="absolute inset-0 rounded-full bg-pink-200/10 animate-pulse" />
+                              <div className="absolute inset-0 rounded-full bg-[#E8C7D0]/10 animate-pulse" />
                             )}
 
                             <Image
@@ -749,7 +776,7 @@ bg-white/5
             md:text-4xl
 
             font-semibold
-            text-pink-100
+            text-[#FFF8F0]
 
             mb-4
           "
@@ -761,7 +788,7 @@ bg-white/5
                               className="
             space-y-3
 
-            text-pink-100/90
+            text-[#FFF8F0]/90
 
             text-base
             md:text-xl
@@ -771,7 +798,7 @@ bg-white/5
                               <p className="flex items-start gap-3">
                                 <CalendarDays
                                   size={18}
-                                  className="text-pink-300 mt-1 flex-shrink-0"
+                                  className="text-[#D8BEC8] mt-1 flex-shrink-0"
                                 />
                                 Jum&apos;at, 26 Juni 2026
                               </p>
@@ -789,7 +816,7 @@ bg-white/5
                         {/* ADDRESS */}
                         <div
                           className="
-        text-pink-100/90
+        text-[#FFF8F0]/90
 
         text-base
         md:text-lg
@@ -817,13 +844,13 @@ bg-white/5
 
           rounded-full
 
-          bg-pink-200
+          bg-[#E8C7D0]
 
           text-[#2b173b]
 
           font-semibold
 
-          shadow-lg shadow-pink-300/20
+          shadow-lg shadow-[#E8C7D0]/15
 
           hover:scale-105
 
@@ -859,7 +886,7 @@ bg-white/5
 
                       {/* SPARKLES */}
                       <div
-                        className="absolute top-6 left-10 text-pink-200/70 text-xl z-20 pointer-events-none"
+                        className="absolute top-6 left-10 text-[#E7C7D1]/70 text-xl z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 2.5s ease-in-out infinite",
                         }}
@@ -868,7 +895,7 @@ bg-white/5
                       </div>
 
                       <div
-                        className="absolute top-10 right-16 text-pink-100/70 text-lg z-20 pointer-events-none"
+                        className="absolute top-10 right-16 text-[#FFF8F0]/70 text-lg z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 3s ease-in-out infinite",
                           animationDelay: "1s",
@@ -878,7 +905,7 @@ bg-white/5
                       </div>
 
                       <div
-                        className="absolute top-1/2 left-6 text-pink-300/70 text-sm z-20 pointer-events-none"
+                        className="absolute top-1/2 left-6 text-[#D8BEC8]/70 text-sm z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 2.8s ease-in-out infinite",
                           animationDelay: "2s",
@@ -888,7 +915,7 @@ bg-white/5
                       </div>
 
                       <div
-                        className="absolute bottom-10 left-1/4 text-pink-200/60 text-lg z-20 pointer-events-none"
+                        className="absolute bottom-10 left-1/4 text-[#E7C7D1]/60 text-lg z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 3.2s ease-in-out infinite",
                           animationDelay: "1.5s",
@@ -898,7 +925,7 @@ bg-white/5
                       </div>
 
                       <div
-                        className="absolute bottom-6 right-10 text-pink-100/60 text-xl z-20 pointer-events-none"
+                        className="absolute bottom-6 right-10 text-[#FFF8F0]/60 text-xl z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 2.2s ease-in-out infinite",
                           animationDelay: "2.3s",
@@ -908,7 +935,7 @@ bg-white/5
                       </div>
 
                       <div
-                        className="absolute top-1/3 right-1/3 text-pink-300/50 text-sm z-20 pointer-events-none"
+                        className="absolute top-1/3 right-1/3 text-[#D8BEC8]/50 text-sm z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 3.5s ease-in-out infinite",
                           animationDelay: "1.8s",
@@ -918,7 +945,7 @@ bg-white/5
                       </div>
 
                       <div
-                        className="absolute bottom-1/3 right-20 text-pink-200/70 text-base z-20 pointer-events-none"
+                        className="absolute bottom-1/3 right-20 text-[#E7C7D1]/70 text-base z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 2.7s ease-in-out infinite",
                           animationDelay: "0.8s",
@@ -928,7 +955,7 @@ bg-white/5
                       </div>
 
                       <div
-                        className="absolute top-20 left-1/2 text-pink-100/60 text-xs z-20 pointer-events-none"
+                        className="absolute top-20 left-1/2 text-[#FFF8F0]/60 text-xs z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 4s ease-in-out infinite",
                           animationDelay: "2.7s",
@@ -938,7 +965,7 @@ bg-white/5
                       </div>
 
                       <div
-                        className="absolute bottom-16 left-12 text-pink-200/50 text-sm z-20 pointer-events-none"
+                        className="absolute bottom-16 left-12 text-[#E7C7D1]/50 text-sm z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 3.8s ease-in-out infinite",
                           animationDelay: "1.1s",
@@ -948,7 +975,7 @@ bg-white/5
                       </div>
 
                       <div
-                        className="absolute top-14 right-1/3 text-pink-100/40 text-xs z-20 pointer-events-none"
+                        className="absolute top-14 right-1/3 text-[#FFF8F0]/40 text-xs z-20 pointer-events-none"
                         style={{
                           animation: "twinkle 2.9s ease-in-out infinite",
                           animationDelay: "0.5s",
@@ -972,7 +999,7 @@ bg-white/5
             md:text-4xl
 
             font-semibold
-            text-pink-100
+            text-[#FFF8F0]
 
             mb-5
           "
@@ -984,7 +1011,7 @@ bg-white/5
                               className="
             space-y-4
 
-            text-pink-100/90
+            text-[#FFF8F0]/90
 
             text-base
             md:text-xl
@@ -994,7 +1021,7 @@ bg-white/5
                               <p className="flex items-start gap-3">
                                 <CalendarDays
                                   size={18}
-                                  className="text-pink-300 mt-1 flex-shrink-0"
+                                  className="text-[#D8BEC8] mt-1 flex-shrink-0"
                                 />
                                 Minggu, 28 Juni 2026
                               </p>
@@ -1034,7 +1061,7 @@ bg-white/5
                         {/* ADDRESS */}
                         <div
                           className="
-        text-pink-100/90
+        text-[#FFF8F0]/90
 
         text-base
         md:text-lg
@@ -1066,13 +1093,13 @@ bg-white/5
 
           rounded-full
 
-          bg-pink-200
+          bg-[#E8C7D0]
 
           text-[#2b173b]
 
           font-semibold
 
-          shadow-lg shadow-pink-300/20
+          shadow-lg shadow-[#E8C7D0]/15
 
           hover:scale-105
 
@@ -1113,36 +1140,36 @@ bg-white/5
                   <div className="space-y-8">
                     {[
                       {
-                        year: "2021",
+                        year: "Mei 2024",
                         title: "first_meet()",
                         image: "/images/1st_meet.JPG",
-                        desc: "Awal pertama kali bertemu.",
+                        desc: "Awal pertama kali bertemu, foto hanyalah napak tilas. Namun yang benar-benar terekam adalah malam itu—aku bersama anggota Saber duduk di angkringan, bermain kartu Uno di bawah lampu temaram, ditemani gelak tawa yang hangat. Disela-sela itu, kami asyik mengobrol tentang dunia pekerjaan kami",
                       },
                       {
-                        year: "2022",
+                        year: "Juli 2025",
                         title: "becoming_close()",
                         images: [
                           "/images/2nd_meet.JPG",
                           "/images/2nd_meet4.JPG",
                           "/images/2nd_meet3.JPG",
                         ],
-                        desc: "Mulai mengenal satu sama lain lebih dekat.",
+                        desc: "Mulai saling mengenal lebih dekat, bukan hanya lewat langkah mendaki Gunung Slamet bersama—aku yang baru pertama kali menjejak jalur pendakian, dan dia yang baru pertama kali menapaki lantai Perpustakaan Nasional. Dari sana, ia mengenalkan aku pada Sobat Teladan, lingkaran sahabatnya, dan mengajak liburan bersama mereka. Seolah semesta merangkai pertemuan ini dengan cara yang sederhana, tapi penuh makna.",
                       },
                       {
-                        year: "2023",
+                        year: "November 2025",
                         title: "falling_in_love()",
                         images: [
                           "/images/3rd_meet.JPG",
                           "/images/3rd_meet4.JPG",
                           "/images/3rd_meet3.JPG",
                         ],
-                        desc: "Mulai mengenal satu sama lain lebih dekat.",
+                        desc: "Jatuh cinta ibarat mengemudi kapal di lautan—kadang goyah, kadang diterpa masalah, kadang pula dipenuhi cahaya kebahagiaan. Dari setiap pertikaian lahir kesepakatan, dan dari setiap badai kita belajar bahwa kita memang diciptakan untuk terus bersama mengarungi dunia ini. Ada saat aku mendorongnya menjauh, namun ia selalu menarikku kembali, memastikan aku tetap di sisinya.",
                       },
                       {
-                        year: "2026",
+                        year: "Juni 2026",
                         title: "marriage_release_v1.0.0",
-                        image: "/images/4th_meet_5.JPG",
-                        desc: "Siap memulai perjalanan baru bersama.",
+                        image: "/images/fotoberdua4.JPG",
+                        desc: "Siap menapaki perjalanan baru bersama. Tak terasa, segala riuh dan rumitnya persiapan ini telah membawa kami sampai di gerbang pernikahan.",
                       },
                     ].map((item, index) => (
                       <motion.div
@@ -1229,7 +1256,7 @@ p-6 md:p-8
       bg-black/30
       backdrop-blur-md
 
-      text-pink-100
+      text-[#FFF8F0]
       text-xs
       font-mono
 
@@ -1271,7 +1298,7 @@ p-6 md:p-8
                         )}
 
                         <div className="p-6 md:p-6 md:p-6 md:p-6 md:p-5 md:p-8 flex flex-col justify-center">
-                          <p className="text-pink-200 font-mono">
+                          <p className="text-[#E7C7D1] font-mono">
                             {item.year}
                           </p>
 
@@ -1279,7 +1306,7 @@ p-6 md:p-8
                             {item.title}
                           </h3>
 
-                          <p className="mt-4 text-gray-400 leading-relaxed">
+                          <p className="mt-4 text-[#D7DEDC] leading-relaxed">
                             {item.desc}
                           </p>
                         </div>
@@ -1291,9 +1318,9 @@ p-6 md:p-8
 
               {/* RSVP */}
               <section className="px-6 py-24">
-                <div className="max-w-3xl mx-auto bg-white/10 border border-pink-200/20 backdrop-blur-xl rounded-3xl p-6 md:p-6 md:p-6 md:p-6 md:p-10">
+                <div className="max-w-3xl mx-auto bg-white/10 border border-[#E7D7CF]/15 backdrop-blur-xl rounded-3xl p-6 md:p-6 md:p-6 md:p-6 md:p-10">
                   <div className="text-center">
-                    <p className="text-pink-200 font-mono">
+                    <p className="text-[#E7C7D1] font-mono">
               // kindly rsvp
                     </p>
 
@@ -1301,8 +1328,8 @@ p-6 md:p-8
                       Konfirmasi Kehadiran
                     </h2>
 
-                    <p className="mt-4 text-gray-400">
-                      Kehadiran dan doa Anda sangat berarti bagi kami.
+                    <p className="mt-4 text-[#D7DEDC]">
+                      Kehadiran dan doa Bapak/Ibu/Saudara/i sangat berarti bagi kami.
                     </p>
                   </div>
 
@@ -1371,18 +1398,18 @@ p-6 md:p-8
 
                     <button
                       type="submit"
-                      className="w-full bg-pink-200 text-black py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition"
+                      className="w-full bg-[#E8C7D0] text-black py-4 rounded-2xl font-semibold flex items-center justify-center gap-2 hover:opacity-90 transition"
                     >
                       <Send size={18} />
                       {loading ? "Mengirim..." : "Kirim RSVP"}                </button>
                   </form>
                   {success && (
                     <div className="mt-6 text-center">
-                      <p className="text-pink-200 text-lg">
+                      <p className="text-[#E7C7D1] text-lg">
                         RSVP berhasil dikirim ✨
                       </p>
 
-                      <p className="mt-2 text-pink-100/70 text-sm">
+                      <p className="mt-2 text-[#FFF8F0]/70 text-sm">
                         Terima kasih atas sudah mengisi form ini ❤️
                       </p>
                     </div>
@@ -1398,7 +1425,7 @@ p-6 md:p-8
     text-2xl
     md:text-3xl
 
-    text-pink-100
+    text-[#FFF8F0]
 
     font-light
 
@@ -1411,7 +1438,7 @@ p-6 md:p-8
                   >
                     Thank you for being part of our story.
                   </p>
-                  <div className="mt-2 font-mono text-pink-200">
+                  <div className="mt-2 font-mono text-[#E7C7D1]">
                     <p
                       className="
       mt-3
@@ -1440,7 +1467,7 @@ p-6 md:p-8
 
                   setMusicPlaying(!musicPlaying)
                 }}
-                className="fixed top-4 right-4 md:top-6 md:right-6 z-50 bg-pink-200/10 border border-pink-200/20 backdrop-blur-xl rounded-full px-4 py-2 md:px-5 md:py-3 flex items-center gap-3 text-pink-100 shadow-lg shadow-pink-500/10"
+                className="fixed top-4 right-4 md:top-6 md:right-6 z-50 bg-[#E8C7D0]/10 border border-[#E7D7CF]/15 backdrop-blur-xl rounded-full px-4 py-2 md:px-5 md:py-3 flex items-center gap-3 text-[#FFF8F0] shadow-lg shadow-[#CDA27E]/10"
               >
                 <>
                   <Music2 size={18} />
@@ -1467,7 +1494,7 @@ p-6 md:p-8
 
                     {/* TITLE */}
                     <div className="text-center relative z-10">
-                      <p className="text-pink-200/70 tracking-[0.3em] text-sm font-mono">
+                      <p className="text-[#E7C7D1]/70 tracking-[0.3em] text-sm font-mono">
           // wedding gift
                       </p>
 
@@ -1475,7 +1502,7 @@ p-6 md:p-8
                         ✨ Send Your Blessing
                       </h2>
 
-                      {/* <p className="mt-6 text-sm md:text-base text-pink-100/70 leading-relaxed px-2 max-w-2xl mx-auto">
+                      {/* <p className="mt-6 text-sm md:text-base text-[#FFF8F0]/70 leading-relaxed px-2 max-w-2xl mx-auto">
                         Kehadiran dan doa Anda adalah hadiah terindah bagi kami.
                         Namun jika ingin mengirim tanda kasih,
                         kami dengan senang hati menerimanya.
@@ -1505,7 +1532,7 @@ lg:grid-cols-2
   "
                       >
                         {/* TITLE */}
-                        <div className="flex items-center gap-3 text-pink-200">
+                        <div className="flex items-center gap-3 text-[#E7C7D1]">
                           <Gift />
 
                           <h3 className="text-xl md:text-2xl font-semibold">
@@ -1513,7 +1540,7 @@ lg:grid-cols-2
                           </h3>
                         </div>
 
-                        <p className="mt-4 text-sm text-pink-100/60 leading-relaxed">
+                        <p className="mt-4 text-sm text-[#FFF8F0]/60 leading-relaxed">
                           Kirim tanda kasih secara digital melalui rekening berikut ✨
                         </p>
 
@@ -1550,7 +1577,7 @@ lg:grid-cols-2
                               key={index}
                               className="
           rounded-2xl
-          border border-pink-300/10
+          border border-[#D6BFA7]/10
           bg-black/10
           p-5
           md:p-6
@@ -1565,7 +1592,7 @@ lg:grid-cols-2
   flex items-center justify-center
   overflow-hidden
   border border-white/10
-  shadow-lg shadow-pink-500/10
+  shadow-lg shadow-[#CDA27E]/10
 ">
                                   <Image
                                     src={item.logo}
@@ -1577,7 +1604,7 @@ lg:grid-cols-2
                                 </div>
 
                                 <div>
-                                  <p className="text-sm text-pink-100/50">
+                                  <p className="text-sm text-[#FFF8F0]/50">
                                     {item.bank}
                                   </p>
 
@@ -1609,10 +1636,10 @@ lg:grid-cols-2
   w-full
   px-4 py-3
   rounded-2xl
-  bg-pink-200
-  text-[#1B1527]
+  bg-[#E8C7D0]
+  text-[#2B1F24]
   font-medium
-  hover:bg-pink-100
+  hover:bg-[#F1D7DE]
   transition-all
   duration-300
 "
@@ -1643,7 +1670,7 @@ lg:grid-cols-2
     "
                         >
                           <div>
-                            <div className="flex items-center justify-center gap-3 text-pink-200">
+                            <div className="flex items-center justify-center gap-3 text-[#E7C7D1]">
                               <Gift />
 
                               <h3 className="text-xl md:text-2xl font-semibold">
@@ -1651,13 +1678,13 @@ lg:grid-cols-2
                               </h3>
                             </div>
 
-                            <p className="mt-4 text-sm text-pink-100/60 leading-relaxed">
+                            <p className="mt-4 text-sm text-[#FFF8F0]/60 leading-relaxed">
                               Scan QR berikut untuk mengirim tanda kasih secara praktis ✨
                             </p>
                           </div>
 
                           <div className="mt-10 flex justify-center">
-                            <div className="bg-white p-4 rounded-3xl shadow-2xl shadow-pink-500/10">
+                            <div className="bg-white p-4 rounded-3xl shadow-2xl shadow-[#CDA27E]/10">
                               <Image
                                 src="/images/qris.png"
                                 alt="QRIS"
@@ -1668,7 +1695,7 @@ lg:grid-cols-2
                             </div>
                           </div>
 
-                          <p className="mt-8 text-sm text-pink-100/50 text-center">
+                          <p className="mt-8 text-sm text-[#FFF8F0]/50 text-center">
                             ABDUL HARIS, DIGITAL & KREATIF
                           </p>
                         </div>
@@ -1684,7 +1711,7 @@ lg:grid-cols-2
       flex-1
     "
                         >
-                          <div className="flex items-center gap-3 text-pink-200">
+                          <div className="flex items-center gap-3 text-[#E7C7D1]">
                             <MapPin />
 
                             <h3 className="text-xl md:text-2xl font-semibold">
@@ -1692,7 +1719,7 @@ lg:grid-cols-2
                             </h3>
                           </div>
 
-                          <p className="mt-4 text-sm text-pink-100/60 leading-relaxed">
+                          <p className="mt-4 text-sm text-[#FFF8F0]/60 leading-relaxed">
                             Untuk pengiriman hadiah fisik ✨
                           </p>
 
@@ -1700,7 +1727,7 @@ lg:grid-cols-2
                             className="
         mt-8
         rounded-2xl
-        border border-pink-300/10
+        border border-[#D6BFA7]/10
         bg-black/10
         p-5 md:p-6
       "
@@ -1725,7 +1752,7 @@ lg:grid-cols-2
           rounded-2xl
           bg-white/10
           border border-pink-200/10
-          text-pink-100
+          text-[#FFF8F0]
           hover:bg-white/20
           transition-all
         "
@@ -1746,10 +1773,10 @@ lg:grid-cols-2
     w-full
     px-4 py-3
     rounded-2xl
-    bg-pink-200
-    text-[#1B1527]
+    bg-[#E8C7D0]
+    text-[#2B1F24]
     font-medium
-    hover:bg-pink-100
+    hover:bg-[#F1D7DE]
     transition-all
   "
                             >
@@ -1771,7 +1798,7 @@ lg:grid-cols-2
     text-xl
     md:text-3xl
 
-    text-pink-100
+    text-[#FFF8F0]
 
     font-medium
 
@@ -1793,7 +1820,7 @@ lg:grid-cols-2
         text-sm
         md:text-base
 
-        text-pink-100/60
+        text-[#FFF8F0]/60
 
         font-mono
 

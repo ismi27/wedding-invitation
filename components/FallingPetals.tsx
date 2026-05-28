@@ -33,7 +33,7 @@ export default function FallingPetals() {
           className="absolute"
         >
           <Image
-            src="/ornaments/petal.png"
+            src="/ornaments/petal2.png"
             alt="petal"
             width={24}
             height={24}

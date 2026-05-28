@@ -42,6 +42,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.font-arabic {
+  font-family: "Amiri", serif;
+}
+
 .swiper-pagination {
   margin-top: 14px !important;
   position: relative !important;
