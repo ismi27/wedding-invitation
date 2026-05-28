@@ -1762,7 +1762,7 @@ lg:grid-cols-2
                             <button
                               onClick={() =>
                                 copyToClipboard(
-                                  "Jl. Melati Indah No. 10, Bandung, Jawa Barat"
+                                  "Jl. Cakung Cilincing Barat No.22, RT 004 RW 016 Kel. Cakung Barat Kec. Cakung Jakarta Timur 13910"
                                 )
                               }
                               className="
