@@ -1110,7 +1110,7 @@ bg-white/5
 
                           <p className="flex items-start gap-3">
                             <span className="mt-1">🕘</span>
-                            11.00 WIB - selesai
+                            09.00 WIB - 18:30 WIB
                           </p>
 
                         </div>
