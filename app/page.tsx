@@ -917,7 +917,8 @@ bg-white/5
                     {/* BUTTON */}
                     <div>
                       <a
-                        href="https://maps.app.goo.gl/vCWZtfR8svV2z3k26"
+                        // href="https://maps.app.goo.gl/vCWZtfR8svV2z3k26"
+                        href="https://www.google.com/maps/place/Kantor+Urusan+Agama+(KUA)+-+Kecamatan+Cakung/@-6.1830965,106.9434919,17z/data=!3m1!4b1!4m6!3m5!1s0x2e698b0340775831:0x2fbec0bb69b9945f!8m2!3d-6.1830965!4d106.9460668!16s%2Fg%2F1hdzklz65?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         className="
           inline-flex items-center gap-2
