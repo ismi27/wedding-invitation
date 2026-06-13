@@ -1822,7 +1822,8 @@ lg:grid-cols-2
                         </p>
 
                         <a
-                          href="https://maps.app.goo.gl/UwnL47pJKcBjRrEK7"
+                          // href="https://maps.app.goo.gl/UwnL47pJKcBjRrEK7"
+                          href="https://www.google.com/maps/place/6%C2%B010'51.5%22S+106%C2%B056'29.3%22E/@-6.1808132,106.9412607,20.68z/data=!4m5!3m4!4b1!8m2!3d-6.1809722!4d106.9414722?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
                           target="_blank"
                           rel="noopener noreferrer"
                           className="
