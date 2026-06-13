@@ -1819,25 +1819,30 @@ lg:grid-cols-2
                         </p>
 
                         <a
-                          href="https://maps.google.com"
+                          href="https://maps.app.goo.gl/sbbcuUqpHJMUbSqe8"
                           target="_blank"
+                          rel="noopener noreferrer"
                           className="
-          inline-flex
-          items-center
-          justify-center
-          mt-5
-          w-full
-          px-4 py-3
-          rounded-2xl
-          bg-white/10
-          border border-pink-200/10
-          text-[#FFF8F0]
-          hover:bg-white/20
-          transition-all
-        "
+    inline-flex
+    items-center
+    justify-center
+    mt-5
+    w-full
+    px-4
+    py-3
+    rounded-2xl
+    bg-white/10
+    border
+    border-pink-200/10
+    text-[#FFF8F0]
+    hover:bg-white/20
+    transition-all
+    cursor-pointer
+  "
                         >
                           Lihat Lokasi
                         </a>
+
                         <button
                           onClick={() =>
                             copyToClipboard(
@@ -1850,13 +1855,15 @@ lg:grid-cols-2
     justify-center
     mt-4
     w-full
-    px-4 py-3
+    px-4
+    py-3
     rounded-2xl
     bg-[#E8C7D0]
     text-[#2B1F24]
     font-medium
     hover:bg-[#F1D7DE]
     transition-all
+    cursor-pointer
   "
                         >
                           <Copy size={18} className="mr-2" />
