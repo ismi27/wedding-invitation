@@ -507,23 +507,23 @@ duration-300
 
               </div>
 
-              <div
-                className="
-      overflow-hidden
-      rounded-[32px]
-      border border-[#D7DEDC]/10
-      bg-white/5
-      backdrop-blur-2xl
-      shadow-2xl
-      "
-              >
+          <div
+  className="
+    overflow-hidden
+    rounded-[32px]
+    border border-[#E7D7CF]/15
+    bg-white/5
+    backdrop-blur-xl
+    shadow-[0_0_35px_rgba(232,199,208,0.08)]
+  "
+>
                 {!showYoutube ? (
                   <button
-                    onClick={() => {
-                      setShowYoutube(true)
-                    }}
-                    className="relative w-full"
-                  >
+  onClick={() => {
+    setShowYoutube(true)
+  }}
+  className="block w-full p-0 m-0"
+>
                     <div className="relative aspect-video">
                       <Image
                         src="/images/fotoberdua5.jpg"
@@ -550,59 +550,50 @@ duration-300
                     </div>
                   </button>
                 ) : (
-                  <div className="aspect-video w-full overflow-hidden rounded-[32px]">
-                    <button
-                      onClick={() => {
-                        setShowYoutube(false)
+<div className="youtube-wrapper relative w-full aspect-video overflow-hidden rounded-[32px]">
+    <button
+      onClick={() => {
+        setShowYoutube(false)
 
-                        if (audioRef.current) {
-                          audioRef.current.volume = 0.4
-                          audioRef.current.play()
+        if (audioRef.current) {
+          audioRef.current.volume = 0.4
+          audioRef.current.play()
+        }
+      }}
+      className="
+      absolute
+      top-4
+      right-4
+      z-20
+      w-10
+      h-10
+      rounded-full
+      bg-black/50
+      text-white
+      "
+    >
+      ✕
+    </button>
 
-                        }
-                      }}
-                      className="
-  absolute
-  top-4
-  right-4
-  z-20
-
-  w-10 h-10
-  rounded-full
-
-  bg-black/50
-  text-white
-  "
-                    >
-                      ✕
-                    </button>
-                    <YouTube
-                      videoId="x8ejHuEHqKQ"
-                      opts={{
-                        width: "100%",
-                        height: "100%",
-                        playerVars: {
-                          autoplay: 1,
-                          rel: 0,
-                        },
-                      }}
-                      className="w-full h-full"
-                      onPlay={() => {
-                        audioRef.current?.pause()
-                      }}
-                      onPause={() => {
-                        audioRef.current?.play()
-                      }}
-                      onEnd={() => {
-                        audioRef.current?.play()
-                      }}
-                    />
-                  </div>
-                )}
+    <YouTube
+  videoId="x8ejHuEHqKQ"
+  opts={{
+    width: "1280",
+    height: "720",
+    playerVars: {
+      autoplay: 1,
+      rel: 0,
+    },
+  }}
+  className="absolute inset-0 w-full h-full"
+  iframeClassName="w-full h-full"
+  onPlay={() => audioRef.current?.pause()}
+  onPause={() => audioRef.current?.play()}
+  onEnd={() => audioRef.current?.play()}
+/>
+  </div>
+)}
               </div>
-
-              <p className="mt-5 text-center text-[#D7DEDC] italic">
-                /    </p>
 
             </div>
           </section>
@@ -1435,17 +1426,32 @@ p-6 md:p-8
                 />
 
                 <select
-                  value={formData.kehadiran}
-                  onChange={(e) =>
-                    setFormData({
-                      ...formData,
-                      kehadiran: e.target.value,
-                    })
-                  }
-                  className="w-full bg-white/5 border border-white/10 rounded-2xl px-5 py-4 outline-none focus:border-pink-300 transition"
-                >
-                  <option>Akan Hadir</option>
-                  <option>Tidak Bisa Hadir</option>
+  value={formData.kehadiran}
+  onChange={(e) =>
+    setFormData({
+      ...formData,
+      kehadiran: e.target.value,
+    })
+  }
+  className="
+    w-full
+    bg-[#E8C7D0]
+    text-black
+    border border-[#E7C7D1]
+    rounded-2xl
+    px-5 py-4
+    outline-none
+    focus:border-[#F1D7DE]
+    transition
+  "
+>
+                  <option value="Akan Hadir" className="bg-[#E8C7D0] text-black">
+  Akan Hadir
+</option>
+
+<option value="Tidak Bisa Hadir" className="bg-[#E8C7D0] text-black">
+  Tidak Bisa Hadir
+</option>
                 </select>
 
                 <input
