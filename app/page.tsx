@@ -1167,7 +1167,8 @@ bg-white/5
                     {/* BUTTON */}
                     <div className="px-2 md:px-4">
                       <a
-                        href="https://maps.app.goo.gl/3bKrRfVPNDVDbZcm7"
+                        // href="https://maps.app.goo.gl/3bKrRfVPNDVDbZcm7"
+                        href="https://www.google.com/maps/place/6%C2%B010'58.1%22S+106%C2%B056'28.0%22E/@-6.182798,106.9404603,19z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.182798!4d106.941104?entry=ttu&g_ep=EgoyMDI2MDYxMC4wIKXMDSoASAFQAw%3D%3D"
                         target="_blank"
                         className="
           inline-flex items-center gap-2
