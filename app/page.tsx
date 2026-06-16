@@ -658,7 +658,7 @@ duration-300
                 <p className="text-l mt-2">
                   Bpk. Lukmanil Hakim
                   <br />
-                  & Ibu. Nurmawilis
+                  & Ibu. Nurmawani
                 </p>
 
                 <a
